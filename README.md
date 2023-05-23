@@ -36,3 +36,7 @@
   2. test
   3. 利用构造函数创建对象
 - 遍历对象 - `for...in` method
+- JS中的对象分为3种：
+  1. 自定义对象 属于ECMAScript
+  2. 内置对象 属于ECMAScript
+  3. 浏览器对象 属于JS独有的

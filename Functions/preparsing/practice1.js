@@ -14,4 +14,4 @@ function fun() {
     num = 20;
 }
 num = 10;
-fun();
+fun()
