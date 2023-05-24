@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<button>Display current system time</button>
+<div>Some time</div>
+<script>
+  // 当我们点击了按钮，div里面的文字会发生变化
+  // 1. 获取元素
+  let btn = document.querySelector('button');
+  let div = document.querySelector('div');
+  // 2. 注册事件
+  btn.onclick = function () {
+    // div.innerText = '2019-6-6';
+      div.innerText = getDate();
+  }
+
+  function getDate() {
+      let date = new Date();
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      const dates = date.getDate();
+      const arr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const day = date.getDay();
+      return 'Today is: ' + year + '年' + month + '月' + dates + '日' + arr[day];
+  }
+  // 元素可以不添加事件
+  let p = document.querySelector(('p'));
+  p.innerText = getDate();
+</script>
+</body>
+</html>
