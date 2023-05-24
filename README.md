@@ -60,13 +60,30 @@
 - 简单类型传参 传递的是值
 - 复杂类型传参 传递的是地址
 
-# 第二部分 - Web APIs
+# 第二部分 - Web APIs - DOM and BOM
 
 - 区分API和Web API:
   - API是为程序员提供的一个接口，帮助我们实现某些功能。
 
   - Web API主要是针对浏览器提供的接口，主要针对于浏览器做交互效果
     - 一般都有输入和输出(函数的传参和返回值)，Web API很多都是方法(函数)
+
+## DOM
+
+### 什么是DOM - Document Object Model
+
+- 推荐的处理可扩展标记语言的标准编程接口
+
+### DOM树
+
+- 文档: 一个页面就是一个文档，DOM种使用document表示
+- 元素: 页面中的所有标签都是元素
+- 节点: 网页中的所有内容都是节点(标签、属性、文本、注释等)，DOM中使用node表示
+- DOM把以上内容都看作对象
+
+### 获取元素
+- 根据ID获取: `getElementById`
+- 根据标签名获取: `getElementsByTagName` 返回带有指定标签名的元素的集合
 
 # Appendix
 
