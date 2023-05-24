@@ -54,11 +54,19 @@
 ### 根据字符返回位置
 
 ## 简单数据类型与复杂数据类型
+
 - 简单数据类型都是放在栈里面，存放的都是值
 - 复杂数据类型放在堆里面。真正的对象实例是放在堆里面
 - 简单类型传参 传递的是值
 - 复杂类型传参 传递的是地址
 
+# 第二部分 - Web APIs
+
+- 区分API和Web API:
+  - API是为程序员提供的一个接口，帮助我们实现某些功能。
+
+  - Web API主要是针对浏览器提供的接口，主要针对于浏览器做交互效果
+    - 一般都有输入和输出(函数的传参和返回值)，Web API很多都是方法(函数)
 
 # Appendix
 
@@ -132,7 +140,8 @@ B站学习资源整合
 
 ### 2. 页面切图和布局实现
 
-* 浮动布局
+- 浮动布局
+
 - 浮动布局：<https://www.bilibili.com/video/BV1Zs411j7Z3>
 - 定位布局
 - CSS定位布局：<https://www.bilibili.com/video/BV1ni4y1g7tc>
@@ -179,7 +188,8 @@ Version Control System
 
 ### 2.  相关平台/软件的使用
 
-* GitHub
+- GitHub
+
 - 十分钟学会Github：<https://www.bilibili.com/video/BV1yo4y1d7UK>
 - GitLab
 - gitlab使用说明：<https://www.bilibili.com/video/BV11E411x7Uv>
@@ -241,6 +251,7 @@ Build Tools
 ### 1. 任务执行命令
 
 [Task Runners]
+
 - npm scripts
 - npm包管理应用：<https://www.bilibili.com/video/BV1Dv411W7XP>
 - Gulp
@@ -248,14 +259,16 @@ Build Tools
 
 ### 2. 打包工具
 
-* Webpack
+- Webpack
+
 - Webpack从入门到精通：<https://www.bilibili.com/video/BV1e7411j7T5>
 - Parcel
 - Parcel初体验：<https://www.bilibili.com/video/BV1Pa4y147Kf>
 
 ### 3. 代码格式化工具
 
-* Prettier
+- Prettier
+
 - Prettier和ESLint使用：<https://www.bilibili.com/video/BV183411r7YK>
 - ESLint
 - ESLint基础入门：<https://space.bilibili.com/390120104/search/video?keyword=ESLint>
@@ -332,19 +345,21 @@ Server Side  Rendering （SSR）
 
 ### React.js
 
-* Next.js
+- Next.js
+
 - Next.js入门教程：<https://www.bilibili.com/video/BV13441117KK>
 - GatsbyJS
 - GatsbyJS 实战：<https://www.bilibili.com/video/BV1i4411T7AR> （英文）
 
 ### Vue.js
 
-* Nuxt.js
+- Nuxt.js
+
 - Nuxt.js入门：<https://www.bilibili.com/video/BV1Xt41117Kg>
 
 ### Angular
 
-* Universal
+- Universal
 
 ## 图形化编程
 
