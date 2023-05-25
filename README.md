@@ -95,6 +95,11 @@
   - element.style
   - className
 
+### Node in DOM
+- 节点至少拥有nodeType(节点类型), nodeName, nodeValue三个基本属性
+- 节点层级：常见的是父子兄层级关系
+  - 父级节点：
+
 # Appendix
 
 # 技术胖的前端学习路径
