@@ -85,6 +85,16 @@
 - 根据ID获取: `getElementById`
 - 根据标签名获取: `getElementsByTagName` 返回带有指定标签名的元素的集合
 
+### 操作元素
+- 操作元素内容
+  - `innerText`
+  - `innerHTML`
+- 操作常见元素属性: src、href、title、alt等
+- 操作表单元素属性: type、value、disabled等
+- 操作元素样式属性:
+  - element.style
+  - className
+
 # Appendix
 
 # 技术胖的前端学习路径
