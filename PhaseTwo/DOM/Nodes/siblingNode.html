@@ -13,9 +13,12 @@
         var div = document.querySelector('div');
         console.log(div.nextSibling);
         console.log(div.previousSibling);
-        
+
+        // 兼容性问题 IE9以上才支持
         console.log(div.nextElementSibling);
         console.log(div.previousElementSibling);
+
+        console.log(div.nextSibling[0]);
     </script>
 </body>
 </html>
