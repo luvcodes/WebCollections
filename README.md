@@ -76,7 +76,7 @@
 
 ### DOM树
 
-- 文档: 一个页面就是一个文档，DOM种使用document表示
+- 文档: 一个页面就是一个文档，DOM中使用document表示
 - 元素: 页面中的所有标签都是元素
 - 节点: 网页中的所有内容都是节点(标签、属性、文本、注释等)，DOM中使用node表示
 - DOM把以上内容都看作对象
@@ -92,7 +92,7 @@
 - 操作常见元素属性: src、href、title、alt等
 - 操作表单元素属性: type、value、disabled等
 - 操作元素样式属性:
-  - element.style
+  - element.style--
   - className
 
 ### Node in DOM
