@@ -53,6 +53,8 @@
 
 ### 根据字符返回位置
 
+### 模版字符串
+
 ## 简单数据类型与复杂数据类型
 
 - 简单数据类型都是放在栈里面，存放的都是值
@@ -160,9 +162,7 @@ B站学习资源整合
 
 ### SEO优化学习教程：<https://www.bilibili.com/video/BV1fE411J7ya>
 
-## 层叠样式表
-
-（CSS)
+## 层叠样式表 CSS
 
 ### 1. CSS 基础知识学习
 
@@ -393,9 +393,7 @@ Server Side  Rendering （SSR）
 
 - Universal
 
-## 图形化编程
-
-GraphQL
+## 图形化编程 GraphQL
 
 ### Cocos Creator
 
@@ -407,9 +405,7 @@ GraphQL
 
 ### Three.js教程：<https://www.bilibili.com/video/BV1va4y1p7QB>
 
-## 静态站点生成器
-
-Static Site Generators
+## 静态站点生成器 Static Site Generators
 
 ### Next.js
 
@@ -431,9 +427,7 @@ Static Site Generators
 
 ### 10分钟搭建个人网站：<https://www.bilibili.com/video/BV1x64y117PX>
 
-## 移动App开发
-
-Mobile Applications
+## 移动App开发 Mobile Applications
 
 ### React  Native
 
