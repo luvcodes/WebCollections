@@ -17,3 +17,6 @@ console.log(obj.uname);
 console.log(obj['age']);
 // (3) 调用对象的方法 sayHi() 对象名.方法名
 obj.sayHi();
+
+// delete obj.sex;
+// console.log(obj);
