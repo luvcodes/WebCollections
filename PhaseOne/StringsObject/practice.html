@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let price = +prompt("Please enter a price: ");
+        let num = +prompt("Please enter a number: ");
+        let address = prompt("Please enter an address: ");
+        let total = price * num; 
+        document.write(`
+        <table>
+            <tr>
+                <th>Price</th>
+                <th>Number</th>
+                <th>Total price</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>${price}</td>
+                <td>${num}</td>
+                <td>${total}</td>
+                <td>${address}</td>
+            </tr>
+        </table>
+        `)
+    </script>
+</body>
+</html>
