@@ -73,22 +73,24 @@
 
 ## DOM
 
-### 什么是DOM - Document Object Model
-
+- 什么是DOM - Document Object Model
 - 推荐的处理可扩展标记语言的标准编程接口
 
 ### DOM树
 
-- 文档: 一个页面就是一个文档，DOM中使用document表示
-- 元素: 页面中的所有标签都是元素
+- 文档节点: 一个页面就是一个文档，DOM中使用document表示
+- 元素节点: 页面中的所有标签都是元素
+- 文本节点
 - 节点: 网页中的所有内容都是节点(标签、属性、文本、注释等)，DOM中使用node表示
 - DOM把以上内容都看作对象
 
 ### 获取元素
+
 - 根据ID获取: `getElementById`
 - 根据标签名获取: `getElementsByTagName` 返回带有指定标签名的元素的集合
 
 ### 操作元素
+
 - 操作元素内容
   - `innerText`
   - `innerHTML`
@@ -99,6 +101,7 @@
   - className
 
 ### Node in DOM
+
 - 节点至少拥有nodeType(节点类型), nodeName, nodeValue三个基本属性
 - 节点层级：常见的是父子兄层级关系
   - 父级节点：
