@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nav">nav bar</p>
+    <ul class="nav">
+        <li>Front page</li>
+        <li>Product intro</li>
+        <li>Contacts</li>
+    </ul>
+    <script>
+        // const nav = document.querySelector('ul');
+        // const li = document.querySelector('ul li:first-child');
+        const lis = document.querySelectorAll('.nav li');
+        console.log(lis);
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+
+        const p = document.querySelectorAll('#nav');
+        console.log(p);
+        p[0].style.color = 'red';
+    </script>
+</body>
+</html>

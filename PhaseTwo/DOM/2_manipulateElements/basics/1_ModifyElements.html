@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Word contents</div>
+    <script>
+        // 1. 获取元素
+        const box = document.querySelector('.box');
+        // 2. 修改文字内容
+        console.log(box.innerText);
+        box.innerText = 'You are a box';
+        box.innerText = '<strong>You are a box</strong>'; // 显示纯文本 不解析标签
+
+        // 3. innerHTML 解析标签
+        console.log(box.innerHTML);
+        box.innerHTML = 'Change content';
+        box.innerHTML = '<strong>Change content</strong>'; // 可以解析标签
+    </script>
+</body>
+</html>
