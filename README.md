@@ -123,7 +123,11 @@
   - 语法: 对象.属性 = 值
 - 操作表单元素属性: type、value、disabled等
 - 操作元素样式属性:
+<<<<<<< HEAD
   - `element.style`
+=======
+  - element.style
+>>>>>>> ca01b02c6384d9827793bb69d1f8de8245c6177b
   - className
 
 ### Node in DOM
