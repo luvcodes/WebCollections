@@ -39,8 +39,8 @@
 - 遍历对象 - `for...in` method
 - JS中的对象分为3种：
   1. 自定义对象 属于ECMAScript
-  2. 内置对象 属于ECMAScript
-  3. 浏览器对象 属于JS独有的
+  2. 内置对象 属于ECMAScript。数组，Math对象，Date对象
+  3. 宿主对象(浏览器对象) 对于嵌入到网页中的JS来说，其宿主对象就是浏览器提供的对象，所以又称为浏览器对象。浏览器对象有很多，如Window和Document，Form，Image，Element等等。
 
 ## String对象
 
@@ -73,7 +73,7 @@
 - 什么是DOM - Document Object Model
 - 推荐的处理可扩展标记语言的标准编程接口
 
-### DOM树
+### DOM树 - 总共12种节点？
 
 - 定义: 将HTML文档以树状结构直观的表现出来，我们称之为文档树或DOM树
 - 作用: 文档树只管的体现了标签与标签之间的关系
@@ -81,7 +81,8 @@
 - 元素节点: 页面中的所有标签都是元素
 - 文本节点
 - 节点: 网页中的所有内容都是节点(标签、属性、文本、注释等)，DOM中使用node表示
-- DOM把以上内容都看作对象
+- 一份文档就是一棵节点树
+- **DOM把以上内容都看作对象**
 
 ### DOM对象
 
@@ -98,7 +99,7 @@
 
 ### 区分document和window
 
-- 每个载入浏览器的 HTML 文档都会成为 Document 对象。Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。提示：Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
+- 每个载入浏览器的 HTML 文档都会成为 Document 对象。Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。提示：**Document 对象是 Window 对象的一部分**，可通过 window.document 属性对其进行访问。
 - Window 对象表示一个浏览器窗口或一个框架。在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。例如，可以只写[document](http://www.w3school.com.cn/jsref/dom_obj_document.asp)，而不必写 window.document。
 
 ### 获取元素
