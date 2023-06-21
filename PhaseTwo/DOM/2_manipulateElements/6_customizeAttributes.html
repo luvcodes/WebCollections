@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--data-后面的这个id不一定是这个名字，可以使用别的名字，但是 data- 不能改变-->
+    <div data-id="1" data-spm="Unknown">1</div>
+    <div data-id="2">2</div>
+    <div data-id="3">3</div>
+    <div data-id="4">4</div>
+    <div data-id="5">5</div>
+
+    <script>
+      const one = document.querySelector("div");
+      console.log(one.dataset);
+      console.log(one.dataset.id);
+      console.log(one.dataset.spm);
+
+      /**
+      标准属性
+      自定义属性
+      在html5中退出来了专门的data-自定义属性
+      在DOM对象上一律以dataset来获取
+      */
+    </script>
+  </body>
+</html>
