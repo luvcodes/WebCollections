@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="text" value="computer"> -->
+    <input type="checkbox" name="" id="" checked />
+
+    <button>Click</button>
+
+    <script>
+      // 1. 获取元素
+      // const uname = document.querySelector('input');
+      // 2. 获取值 获取表单里面的值 用的表单.value
+      // console.log(uname.value); // 通过.value来获取值
+      // // console.log(uname.innerHTML); // innerHTML 得不到表单的内容
+      // 3. 设置表单的值
+      // uname.value = "I need to buy computer";
+      // console.log(uname.type);
+      // uname.type = "password";
+
+      // 1. 获取
+      const ipt = document.querySelector("input");
+      // console.log(ipt.checked)
+      ipt.checked = true;
+      // ipt.checked = 'true';
+
+      // 1. 获取
+      const button = document.querySelector("button");
+      // console.log(button.disabled); // 默认是false 所以这样是可以点击button的
+      button.disabled = true;
+    </script>
+  </body>
+</html>

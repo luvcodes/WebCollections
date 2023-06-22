@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 这个函数是一个匿名函数, 每隔一秒钟回来调用一次function
+      // setInterval(function() {
+      //   console.log("Hello");
+      // }, 1000);
+
+      function fn() {
+        console.log("Every seconds operate once");
+      }
+      // // setInterval(函数名, 间隔时间) 函数名不要加小括号
+      // setInterval(fn, 1000); // 这里不要加小括号，不然就会变成函数调用
+      // // setInterval('fn()', 1000);
+
+      // 定时器返回的是一个id数字，是一个Number类型
+      // 定义n要用let，不要用const，因为有可能下面会关闭定时器以后重新开定时器，会出现对n的重复定义的情况，不能用const来修饰
+      // let n = setInterval(fn, 1000);
+      // console.log(n);
+
+      // let m =setInterval(function() {
+      //   console.log(11);
+      // }, 2000);
+      // console.log(m);
+
+      // 定时器函数可以开启和关闭定时器
+      let n = setInterval(fn, 1000);
+      console.log(n);
+      // 关闭定时器
+      clearInterval(n);
+    </script>
+  </body>
+</html>

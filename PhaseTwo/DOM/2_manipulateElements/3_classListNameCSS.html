@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        color: white;
+      }
+
+      .active {
+        color: red;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Content</div>
+
+    <script>
+      // 通过classList添加
+      // 1. 获取元素
+      const box = document.querySelector(".box");
+      // 2. 修改样式
+      // box.classList.add('active'); // 追加类 add() 类名不加点，而且是字符串
+      // 2.2 删除类 remove()
+      // box.classList.remove('box'); // 类名不加点，而且是字符串
+      // 2.3 切换类 toggle() 悠久删掉，没有就加上
+      box.classList.toggle("active"); // 看html文件的div里面有没有active包含在div中，如果没有就是在后面加上，如果有 那么就是删除active
+
+      // 使用className和classList的区别
+      /**
+      修改大量样式的更方便
+      修改不多样式的时候方便
+      classList是追加和删除不影响以前类名
+    */
+    </script>
+  </body>
+</html>
