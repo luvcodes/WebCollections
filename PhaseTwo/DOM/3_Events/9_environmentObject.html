@@ -8,6 +8,7 @@
 <body>
     <button>Click</button>
     <script>
+        // 每个函数里面都有this 环境对象 普通函数里面this指向的是window
         // function fn() {
         //     console.log(this);
         // }
@@ -15,7 +16,9 @@
 
         const btn = document.querySelector('button');
         btn.addEventListener('click', function() {
-            console.log(this); // btn 对象
+            // console.log(this); // btn 对象
+            // btn.style.color = 'red';
+            this.style.color = 'red';
         });
     </script>
 </body>
