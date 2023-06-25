@@ -134,6 +134,12 @@
   - 事件源 (谁被触发了)
   - 事件类型 (用什么方式触发，点击还是鼠标经过等)
   - 事件处理程序 (要做什么事情)
+- onclick和addEventListener的区别
+  - DOM L0
+    - 事件源.on事件 = function() {}
+  - DOM L2
+    - 事件源.addEventListener(事件, 事件处理函数)
+  - 区别: on方式会被覆盖，addEventListener方式可绑定多次，拥有事件更多特性，推荐使用
 
 
 ### Node in DOM
