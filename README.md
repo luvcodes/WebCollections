@@ -151,7 +151,7 @@
   - 焦点事件: `focus`, `blur`
   - 键盘事件: `keydown`, `keyup`
   - 文本事件: `input`
-- 
+- 练习: 评论回车发布，统计字数
 
 ### Node in DOM
 
