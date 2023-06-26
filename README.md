@@ -238,7 +238,27 @@
 ### Node in DOM
 
 - 节点至少拥有nodeType(节点类型), nodeName, nodeValue三个基本属性
-- 节点层级：常见的是父子兄层级关系
-  - 父级节点：
+- DOM节点
+  - DOM节点: DOM树里每一个内容都称之为节点
+- 节点类型:
+  - 元素节点
+    - 所有的标签 比如body、div
+    - html是根节点
+  - 属性节点
+    - 所有的属性 比如 href
+  - 文本节点
+    - 所有的文本
+- 查找节点
+  - 父节点查找
+    - parentNode
+  - 子节点查找
+    - childNodes: 获得所有子节点、包括文本节点(空格、换行)、注释节点等。
+    - **children属性**: 仅获得所有元素节点，返回的还是一个伪数组。
+    - `父元素.children`
+  - 兄弟关系查找
+    - 下一个兄弟节点: nextElementSibling属性
+    - 上一个兄弟节点: previousElementSibling属性
+- 增加节点
+- 删除节点
 
 ## BOM

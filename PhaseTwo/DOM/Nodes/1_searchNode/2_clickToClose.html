@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am advertisement
+        <div class="box1">X</div>
+    </div>
+    <div class="box">
+        I am advertisement
+        <div class="box1">X</div>
+    </div>
+    <div class="box">
+        I am advertisement
+        <div class="box1">X</div>
+    </div>
+    <script>
+        // // 1. 获取信息源
+        // const box1 = document.querySelector('.box1');
+        // // 2. 事件侦听
+        // box1.addEventListener('click', function() {
+        //     this.parentNode.style.display = 'none';
+        // })
+
+
+        // 1. 获取三个关闭按钮
+        const closeBtn = document.querySelector('.box1');
+        for (let i = 0; i < closeBtn.length; i++) {
+            closeBtn[i].addEventListener('click', function() {
+                this.parentNode.style.display = 'none';
+            })
+        }
+    </script>
+</body>
+</html>
