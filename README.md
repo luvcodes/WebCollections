@@ -259,6 +259,10 @@
     - 下一个兄弟节点: nextElementSibling属性
     - 上一个兄弟节点: previousElementSibling属性
 - 增加节点
+  - 创建节点
+  - 追加节点
+    - 插入到父元素的最后一个子元素: `父元素.appendChild(要插入的元素)`
+    - 插入到父元素中某个子元素的前面: `父元素.insertBefore(要插入的元素, 在哪个元素前面)`
 - 删除节点
 
 ## BOM
