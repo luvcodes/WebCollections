@@ -151,7 +151,7 @@
   - 焦点事件: `focus`, `blur`
   - 键盘事件: `keydown`, `keyup`
   - 文本事件: `input`
-- 事件绑定: JavaScript绑定事件的三种方式 (https://juejin.cn/post/6844903720136736775)
+- 事件绑定: JavaScript绑定事件的三种方式 (<https://juejin.cn/post/6844903720136736775>)
 
 ### 事件对象
 
@@ -266,8 +266,11 @@
 - 删除节点
 
 ## BOM
+
 ### Window对象
+
 #### BOM
+
 - BOM(Browser Object Model) 是浏览器对象模型
 - window对象是一个全局对象，也可以说是JavaScript中的顶级对象
 - 像document、alert()、console.log()这些都是window的属性，基本BOM的属性和方法都是window的。
@@ -275,14 +278,14 @@
 - window对象下的属性和方法调用的时候可以省略window
 
 #### 定时器 - 延时函数
+
 - JavaScript内置的一个用来让代码延迟执行的函数，叫setTimeout
 - 语法: `setTimeout(回调函数, 等待的毫秒数)`
 - setTimeout仅仅只执行一次，所以可以理解为就是把这一段代码延迟执行，平时省略window
 - **清楚延迟函数**: `let timer = setTimeout(回调函数, 等待的毫秒数); clearTimeout(timer);`
-- 两种定时器对比: 
+- 两种定时器对比:
   - 延时函数: 执行的次数
   - 间歇函数: 每隔一段时间就执行一次，除非手动清除
-
 
 #### JS执行机制
 
@@ -291,16 +294,31 @@
 #### location对象
 
 - location的数据类型是对象, 它拆分并保存了URL地址的各个组成部分
-- **常用属性和方法**: 
+- **常用属性和方法**:
   - location.href属性获取完整的URL地址，对其赋值时用于地址的跳转
   - search属性获取地址中懈怠的参数，符号?后面部分。`console.log(location.search)`
   - hash属性获取中的哈希值，符号#后面部份
   - reload方法用来刷新当前页面，传入参数true时表示强制刷新
 
-
 #### navigator对象
 
+#### history对象
 
+### 本地存储
 
-#### histroy对象
-
+- 本地存储介绍
+  - 数据存储在用户浏览器中
+  - 设置、读取方便、甚至页面刷新不丢失数据
+  - 容量较大，sessionStorage和localStorage约5M左右
+- 本地存储分类 - `localStorage`
+  - 语法:
+    - 存储数据: `localStorage.setItem(key, value)`
+    - 获取数据: `localStorage.getItem(key)`
+    - 删除数据: `localStorage.removeItem(key)`
+  - 可以将数据永久存储在本地(用户的电脑)，除非手动删除，否则关闭页面也会存在
+- 本地存储分类 - `sessionStorage`
+  - 特性:
+    - 生命周期为关闭浏览器窗口
+    - 在一个窗口(页面)下数据可以共享
+    - 以键值对的形式存储使用
+    - 用法跟localStorage基本相同
