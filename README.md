@@ -127,7 +127,7 @@
   - element.style
   - className
 
-### 事件
+## 事件
 
 - 什么是事件监听
   - 就是让程序检测是否有事件产生，一旦有事件触发，就立即调用一个函数做出响应，也称为注册事件
@@ -187,7 +187,6 @@
 - 事件捕获概念: 从DOM的根元素开始去执行对应的事件(从外到里)
 - 事件捕获需要写对应打的吗才能看到效果
 - `DOM.addEventListener(事件类型, 事件处理函数, 是否使用捕获机制)`
--
 
 #### 区分事件冒泡和事件捕获 - 见此网页: <https://juejin.cn/post/7118717854962155533>
 
@@ -266,3 +265,33 @@
 - 删除节点
 
 ## BOM
+### BOM
+- BOM(Browser Object Model) 是浏览器对象模型
+- window对象是一个全局对象，也可以说是JavaScript中的顶级对象
+- 像document、alert()、console.log()这些都是window的属性，基本BOM的属性和方法都是window的。
+- 所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法
+- window对象下的属性和方法调用的时候可以省略window
+
+### 定时器 - 延时函数
+- JavaScript内置的一个用来让代码延迟执行的函数，叫setTimeout
+- 语法: `setTimeout(回调函数, 等待的毫秒数)`
+- setTimeout仅仅只执行一次，所以可以理解为就是把这一段代码延迟执行，平时省略window
+- **清楚延迟函数**: `let timer = setTimeout(回调函数, 等待的毫秒数); clearTimeout(timer);`
+- 两种定时器对比: 
+  - 
+
+
+### JS执行机制
+
+
+
+### location对象
+
+
+
+### navigator对象
+
+
+
+### histroy对象
+
