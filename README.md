@@ -265,14 +265,15 @@
 - 删除节点
 
 ## BOM
-### BOM
+### Window对象
+#### BOM
 - BOM(Browser Object Model) 是浏览器对象模型
 - window对象是一个全局对象，也可以说是JavaScript中的顶级对象
 - 像document、alert()、console.log()这些都是window的属性，基本BOM的属性和方法都是window的。
 - 所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法
 - window对象下的属性和方法调用的时候可以省略window
 
-### 定时器 - 延时函数
+#### 定时器 - 延时函数
 - JavaScript内置的一个用来让代码延迟执行的函数，叫setTimeout
 - 语法: `setTimeout(回调函数, 等待的毫秒数)`
 - setTimeout仅仅只执行一次，所以可以理解为就是把这一段代码延迟执行，平时省略window
@@ -281,17 +282,17 @@
   - 
 
 
-### JS执行机制
+#### JS执行机制
 
 
 
-### location对象
+#### location对象
 
 
 
-### navigator对象
+#### navigator对象
 
 
 
-### histroy对象
+#### histroy对象
 
