@@ -279,12 +279,13 @@
 - setTimeout仅仅只执行一次，所以可以理解为就是把这一段代码延迟执行，平时省略window
 - **清楚延迟函数**: `let timer = setTimeout(回调函数, 等待的毫秒数); clearTimeout(timer);`
 - 两种定时器对比: 
-  - 
+  - 延时函数: 执行的次数
+  - 间歇函数: 每隔一段时间就执行一次，除非手动清除
 
 
 #### JS执行机制
 
-
+![image-20230627131933560](C:\Users\ryanw\AppData\Roaming\Typora\typora-user-images\image-20230627131933560.png)
 
 #### location对象
 
