@@ -151,6 +151,7 @@
   - 焦点事件: `focus`, `blur`
   - 键盘事件: `keydown`, `keyup`
   - 文本事件: `input`
+- 事件绑定: JavaScript绑定事件的三种方式 (https://juejin.cn/post/6844903720136736775)
 
 ### 事件对象
 
@@ -289,6 +290,12 @@
 
 #### location对象
 
+- location的数据类型是对象, 它拆分并保存了URL地址的各个组成部分
+- **常用属性和方法**: 
+  - location.href属性获取完整的URL地址，对其赋值时用于地址的跳转
+  - search属性获取地址中懈怠的参数，符号?后面部分。`console.log(location.search)`
+  - hash属性获取中的哈希值，符号#后面部份
+  - reload方法用来刷新当前页面，传入参数true时表示强制刷新
 
 
 #### navigator对象
