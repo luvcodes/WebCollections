@@ -20,10 +20,25 @@
 
 // 外面要使用这个 10 
 
+
+
 // 闭包的应用 统计函数调用的次数
-let i = 0;
-function fn() {
-    i++;
-    console.log(`函数被调用了${i}次`);
+// let i = 0;
+// function fn() {
+//     i++;
+//     console.log(`函数被调用了${i}次`);
+// }
+// fn();
+
+
+// 因为i是全局变量，容易被修改
+// 闭包形式 统计函数调用的次数
+function count() {
+    let i = 0;
+    function fn() {
+        i++;
+        console.log(i);
+    }
+    return fn;
 }
-fn();
+const fn = count();
