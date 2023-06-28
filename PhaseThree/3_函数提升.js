@@ -9,3 +9,4 @@ fun();
 var fun = function() {
     console.log('函数表达式');
 }
+// 函数表达式 必须先声明
