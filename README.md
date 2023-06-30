@@ -118,7 +118,7 @@
 ### 操作元素
 
 - 操作元素内容
-  - `innerText`: 不解析标签
+  - `innerText`: 不解析标签 (不识别HTML标签)
   - `innerHTML`: 能解析标签
 - 操作常见元素属性: src、href、title、alt等
   - 语法: 对象.属性 = 值
@@ -148,6 +148,8 @@
   
 - 事件类型
   - 鼠标事件: `click`, `mouseenter`, `mouseleave`
+    - `mouseenter`和`mouseover`的区别
+      - 当鼠标移动到元素上时就会触发mouseenter事件，类似mouseover，它们两者之间的差别是: mouseover鼠标经过自身盒子会触发，经过子盒子还会触发; mouseenter只会经过自身盒子触发。之所以这样，就是因为mouseenter不会冒泡。跟mouseenter搭配使用，mouseleave也不会冒泡。
   - 焦点事件: `focus`, `blur`
   - 键盘事件: `keydown`, `keyup`
   - 文本事件: `input`
@@ -302,14 +304,19 @@
 
 #### navigator对象
 
+- navigator对象包含有关浏览器的信息，它有很多属性，我们最常用的是userAgent，该属性可以返回由客户机发送服务器的user-agent头部的值。
+
 #### history对象
+
+- 与浏览器历史记录进行交互
+- `forward()`, `back()`, `go()`
 
 ### 本地存储
 
 - 本地存储介绍
-  - 数据存储在用户浏览器中
+  - **数据存储在用户浏览器中**
   - 设置、读取方便、甚至页面刷新不丢失数据
-  - 容量较大，sessionStorage和localStorage约5M左右
+  - 容量较大，sessionStorage 5M和localStorage约20M左右
 - 本地存储分类 - `localStorage`
   - 语法:
     - 存储数据: `localStorage.setItem(key, value)`
@@ -478,38 +485,54 @@
 - toFixed() 设置保留小数位的长度
 
 ### 原型
+
 #### 原型 - Prototype
+
 - 构造函数和原型里面的this指向实例化的对象
 
 #### 数组扩展
 
 #### constructor属性
+
 - 如果有多个对象的方法，我们可以给原型对象采取对象形式赋值
 - 但是这样就会覆盖构造函数原型对象原来的内容，这样修改后的原型对象 constructor 就不再指向当前构造函数了。此时，我们可以在修改后的原型对象中，添加一个constructor指向原来的构造函数。
 
 #### 对象原型
-- 对象都会有一个属性**__proto__** 指向构造函数的prototype原型对象
 
+- 对象都会有一个属性****proto**** 指向构造函数的prototype原型对象
 
 #### 原型继承
 
 #### 原型链以及instanceOf
 
 ### 深浅拷贝
+
 #### 浅拷贝
+
 #### 递归函数
+
 #### 深拷贝
+
 - 深拷贝实现
 - 利用lodash和JSON实现深拷贝
+
 ### 异常处理
+
 #### throw抛异常
+
 #### try/catch捕获异常
+
 #### debugger
+
 ### 处理this
+
 - 普通函数和箭头函数的this
 - call方法改变this指向
 - apply方法
 - bind方法
+
 ### 性能优化
+
 #### 防抖以及底层实现
+
 #### 节流以及底层实现
