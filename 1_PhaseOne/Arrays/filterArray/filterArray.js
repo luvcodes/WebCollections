@@ -25,8 +25,8 @@ var j = 0;
 for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] > 10) {
         // 新数组应该从0开始 依次递增
-        newArr1[newArr1.length] = arr1[i];
-        j++;
+        newArr1[newArr1.length] = arr1[i]; // newArr1.length是逐次递增的，就像j++一样
+        // j++;
     }
 }
 console.log(newArr1);
