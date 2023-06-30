@@ -453,4 +453,28 @@
 - 引用类型: Object, Array, RegExp, Date等
 - 包装类型: String, Number, Boolean等
 
-- Object
+#### Object静态方法
+
+- assign: 合并一个多个对象到目标对象，并返回目标对象
+- keys: 获取对象中所有key集合，数组
+- values: 获取对象中所有的值集合，数组
+
+#### Array
+
+- 常见方法(高阶函数): forEach, filter, map, reduce, find, every
+- Array.from(): 将伪数组转为数组
+
+#### String
+
+- 字符串常见方法:
+  - split, startsWith, includes, substring
+  - toUpperCase, toLowerCase, indexOf
+- length长度属性, String()直接使用转字符串
+- num.toString(): 转换为字符串
+
+#### Number
+
+- Number() 直接使用传数字
+- toFixed() 设置保留小数位的长度
+
+### 原型 - Prototype
