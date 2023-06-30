@@ -9,6 +9,8 @@ var arr = [1,2,3];
 // (2) push() 参数可以直接写 数组元素就可以了
 // (3) push完毕之后，返回的结果是 新数组的长度
 // (4) 原数组也会发生变化
+
+
 // 2. unshift 在数组的开头 添加一个或者多个数组
 arr.unshift('red', 'purple');
 console.log(arr);
