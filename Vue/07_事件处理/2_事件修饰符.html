@@ -46,8 +46,12 @@
 
       <!--阻止事件冒泡-->
       <div class="demo1" @click="showInfo">
-        <button @click.stop="showInfo">点我提示信息</button>
+        <!-- <button @click.stop="showInfo">点我提示信息</button> -->
+        <a href="https://www.google.com" @click.stop.prevent="showInfo">点我提示信息</a>
+        <!--修饰符可以连续写 @click.stop.prevent-->
+        <!-- <a href="https://www.google.com" @click.prevent.stop="showInfo">点我提示信息</a> --> 
       </div>
+      
       <!--事件只触发一次-->
       <button @click.once="showInfo">点我提示信息</button>
 
@@ -57,12 +61,12 @@
         <div class="box2" @click="showMsg(2)">div2</div>
       </div>
 
-      <!--只有event.target是当前操作的元素时才触发事件-->
+      <!--只有event.target是当前操作的元素时才触发事件 (用的不多)-->
       <div class="demo1" @click.self="showInfo">
         <button @click="showInfo">点我提示信息</button>
       </div>
 
-      <!--事件的默认行为立即执行，无需等待事件回调执行完毕-->
+      <!--事件的默认行为立即执行，无需等待事件回调执行完毕 (用得不多)-->
       <ul @wheel.passive="demo" class="list"> <!--scroll是滚动条的滚动，wheel是鼠标滚轮的滚动-->
         <li>1</li>
         <li>2</li>
