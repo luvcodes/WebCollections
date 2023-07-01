@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        Surname: <input type="text" v-model="firstName"><br><br>
+        First name: <input type="text" v-model="lastName"><br><br>
+        Full name: <span>{{fullName}}</span><br><br>
+    </div>
+</body>
+<script>
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            firstName: '张',
+            lastName: '三',
+        },
+        methods: {
+
+        }, 
+        computed: {
+            // 完整写法
+            // fullName: {
+            //     get() {
+            //         console.log('get is called');
+            //         return this.firstName + '-' + this.lastName;
+            //     },
+            //     set(value) {
+            //         console.log('set', value);
+            //         const arr = value.split('-');
+            //         this.firstName = arr[0];
+            //         this.lastName = arr[1];
+            //     }
+            // }
+
+            // 简写
+            // 当作getter用
+            fullName:function() {
+                console.log('get被调用了');
+                return this.firstName + '-' + this.lastName;
+            }
+        }
+    })
+</script>
+</html>
