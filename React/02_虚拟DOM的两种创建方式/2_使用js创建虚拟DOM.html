@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="test"></div>
+    <!--React核心库-->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!--React扩展库-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script type="text/javascript">
+      // 1. 创建虚拟DOM
+      const VDOM = React.createElement('h1', {id:'title'}, React.createElement('span', {}, 'Hello React'));    //   (标签类型, 标签属性, 标签内容)   
+      
+      // 2. 渲染虚拟DOM到页面
+      //   ReactDOM.render(虚拟DOM, 容器);
+      ReactDOM.render(VDOM, document.getElementById('test'));
+    </script>
+  </body>
+</html>
