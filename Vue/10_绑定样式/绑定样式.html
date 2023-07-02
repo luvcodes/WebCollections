@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="root">
+        <!-- 绑定class样式 -- 字符串写法，适用于: 样式的类名不确定，需要动态指定(一点就变化) -->
+      <div class="basic" :class="mood" @click="changeMood">{{name}}</div>
+
+      <div class="basic" :class="arr">{{name}}</div>
+    </div>
+  </body>
+  <script>
+    new Vue({
+      el: "#root",
+      data: {
+        name: "ryan",
+        mood: "normal",
+        arr:['atguigu1', 'atguigu2', 'atguigu3'],
+      },
+      methods: {
+        changeMood() {
+            const arr = ['happy', 'sad', 'normal'];
+            const index = Math.floor(Math.random()*3); // Math.random()生成的是0到1，但不会生成1。乘以三那么就是0.xxx, 1.xxx, 2.xxx，不会是3开头。再向下取整就是0，1，2
+            this.mood = arr[index];
+        },
+      },
+    });
+  </script>
+</html>
