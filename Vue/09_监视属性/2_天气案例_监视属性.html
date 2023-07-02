@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+        <h2>Today's weather is {{info}}</h2>
+        <button @click="changeWeather">Change weather</button>
+    </div>
+  </body>
+  <script>
+    Vue.config.productionTip = false;
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            isHot:true,
+        },
+        computed: {
+            info() {
+                return this.isHot ? 'Hot' : 'Cold'; // 在这里要加上this，模板里调用isHot可以不用this
+            }
+        },
+        methods: {
+            changeWeather() {
+                this.isHot = !this.isHot;
+            }
+
+        },
+        watch: {
+          isHot: {
+            immediate:true, // 初始化时让handler调用一下
+            // handler什么时候调用？当isHot发生改变时
+            handler(newValue, oldValue) {
+              console.log('isHot has been changed', newValue, oldValue);  
+            }
+          }
+        }
+    })
+  </script>
+</html>
