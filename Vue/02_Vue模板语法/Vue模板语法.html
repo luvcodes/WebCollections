@@ -10,7 +10,7 @@
       Vue模板语法有两大类:
         1. 插值语法: 
           功能: 用于解析标签体内容
-          写法: {{xxx}}, xxx是s表达式，且可以直接读取到data中的所有属性
+          写法: {{xxx}}, xxx是表达式，且可以直接读取到data中的所有属性
         2. 指令语法: 
           功能: 用于解析标签
           举例: v-bind:href="xxx" 或 简写为 :href="xxx", xxx同样要写js表达式，且可以直接读取到data中的所有属性
@@ -22,10 +22,7 @@
       <br />
 
       <h1>指令语法</h1>
-      <!-- 
-    如果加了v-bind 就会把引号里面的东西当作js表达式去执行 
-    v-bind: 可以简写成 :
-  -->
+      <!-- 如果加了v-bind 就会把引号里面的东西当作js表达式去执行v-bind: 可以简写成 : -->
       <a v-bind:href="school.url.toUpperCase()">Click to redirect to {{school.name}} site for learning</a>
       <a :href="school.url">Click to redirect to Google</a>
     </div>
