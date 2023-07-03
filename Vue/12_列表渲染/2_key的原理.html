@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+        <h2>Person list</h2>
+        <button @click.once="add">Add a new person</button>
+        <!-- 遍历数组 -->
+        <ul>
+            <li v-for="(p,index) in persons" :key="index">
+                {{p.name}} - {{p.age}}
+            </li>
+        </ul>
+    </div>
+  </body>
+
+  <script>
+    Vue.config.productionTip = false;
+    
+    new Vue({
+      el: "#root",
+      data: {
+        persons: [
+            {id: '001',name: 'John', age: 18},
+            {id: '002',name: 'Ryan', age: 19},
+            {id: '003',name: 'Mark', age: 20},
+        ],
+      },
+      methods: {
+        add() {
+            const p = {id:'004', name: 'Daisy', age: 40};
+            this.persons.unshift(p);
+        }
+      } 
+    });
+  </script>
+</html>
