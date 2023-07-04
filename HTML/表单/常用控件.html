@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <!-- 
+      表单控件: 
+
+      文本输入框
+      密码输入框
+     -->
+    <form action="https://search.jd.com/search">
+      Account: <input type="text" name="account" value="zhangsan" maxlength="10"/><br />  
+      Password: <input type="password" name="password" maxlength="6" /><br />
+      Gender: 
+      <!-- 对于单选框必须有value，否则gender就直接就变成gender=on -->
+      <!-- 如果想要一个默认勾选的选项，那么就用checked -->
+      <input type="radio" name="Gender" value="male">男 
+      <input type="radio" name="Gender" value="female" checked>女 
+      <br />
+      Hobbies: 
+      <input type="checkbox" name="hobby" value="smoke" checked>Smoking
+      <input type="checkbox" name="hobby" value="drink">Drinking
+      <input type="checkbox" name="hobby" value="perm">烫头
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
