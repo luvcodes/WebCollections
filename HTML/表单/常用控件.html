@@ -14,25 +14,43 @@
      -->
     <form action="https://search.jd.com/search">
       <!-- 文本输入框 -->
-      Account: <input type="text" name="account" value="zhangsan" maxlength="10"/><br />  
+      Account:
+      <input type="text" name="account" value="zhangsan" maxlength="10" /><br />
       <!-- 密码输入框 -->
       Password: <input type="password" name="password" maxlength="6" /><br />
       <!-- 单选框 -->
-      Gender: 
+      Gender:
       <!-- 单选框一定要有name，普通输入框可以没有value，单选框、复选框一定要有value -->
       <!-- 对于单选框必须有value，否则gender就直接就变成gender=on -->
       <!-- 如果想要一个默认勾选的选项，那么就用checked -->
-      <input type="radio" name="Gender" value="male">男 
-      <input type="radio" name="Gender" value="female" checked>女 
+      <input type="radio" name="Gender" value="male" />男
+      <input type="radio" name="Gender" value="female" checked />女
       <br />
       <!-- 多选框 -->
-      Hobbies: 
-      <input type="checkbox" name="hobby" value="smoke" checked>Smoking
-      <input type="checkbox" name="hobby" value="drink">Drinking
-      <input type="checkbox" name="hobby" value="perm">烫头
+      Hobbies:
+      <input type="checkbox" name="hobby" value="smoke" checked />Smoking
+      <input type="checkbox" name="hobby" value="drink" />Drinking
+      <input type="checkbox" name="hobby" value="perm" />烫头
       <br />
+
+      <!-- 不能编写type属性，其他属性与文本输入框一致 -->
+      其他:
+      <textarea name="other" cols="26" rows="3"> </textarea>
+      <br />
+
+      <!-- option标签设置value属性，如果没有value属性，提交的数据是option中间的文字；如果设置了
+      value属性，提交的数据就是value的值（建议设置value值）
+        option标签设置了selected属性，表示默认选中。
+    -->
+      籍贯:
+      <select name="place">
+        <option value="冀">hebei</option>
+        <option value="鲁">shandong</option>
+        <option value="晋" selected>shanxi</option>
+      </select>
+
       <!-- 隐藏域：用户不可见的输入区域，提交表单的时候，携带一些固定的数据 -->
-      <input type="hidden" name="from" value="toutiao">
+      <input type="hidden" name="from" value="toutiao" />
       <br />
       <!-- 确认按钮 第一种写法 -->
       <button type="submit">Confirm</button>
@@ -42,14 +60,14 @@
       <!-- 如果不设置value(默认值)，那么重置就显示默认值 -->
       <!-- 重置按钮 第一种写法 -->
       <!-- <button type="reset">重置</button> -->
-      <input type="reset" value="Click me to reset">
+      <input type="reset" value="Click me to reset" />
 
       <!-- 如果button不定义type，那么默认就是submit，就会直接提交 -->
       <!-- type定义成button，就是一个普普通通的button -->
       <!-- 第一种写法 -->
-      <input type="button" value="检测账户是否被注册">
+      <input type="button" value="检测账户是否被注册" />
       <!-- 第二种写法 -->
-      <button type="button">检测账户是否被注册</button>
+      <!-- <button type="button">检测账户是否被注册</button> -->
     </form>
   </body>
 </html>
