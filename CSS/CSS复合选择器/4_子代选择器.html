@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 这样可以宣导zhangsan lisi wangwu sunqi */
+        div > a {
+            color: red;
+        }
+        div > p > a {
+            color: skyblue;
+        }
+        /* 加上了foot 可以用类选择器 */
+        .foot > a {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="#">zhangsan</a>
+    <a href="#">lisi</a>
+    <a href="#">wangwu</a>
+    <p>
+        <a href="#">zhaoliu</a>
+        <div class="foot">
+            <a href="#">sunqi</a>'
+        </div>
+</div>
+    </p>
+</div>
+</body>
+</html>
