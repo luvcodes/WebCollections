@@ -7,25 +7,46 @@
   <body>
     <!-- 
       表单控件: 
-
-      文本输入框
-      密码输入框
+        文本输入框
+        密码输入框
+      
+        name就是相当于url的键，value就是值。
      -->
     <form action="https://search.jd.com/search">
+      <!-- 文本输入框 -->
       Account: <input type="text" name="account" value="zhangsan" maxlength="10"/><br />  
+      <!-- 密码输入框 -->
       Password: <input type="password" name="password" maxlength="6" /><br />
+      <!-- 单选框 -->
       Gender: 
+      <!-- 单选框一定要有name，普通输入框可以没有value，单选框、复选框一定要有value -->
       <!-- 对于单选框必须有value，否则gender就直接就变成gender=on -->
       <!-- 如果想要一个默认勾选的选项，那么就用checked -->
       <input type="radio" name="Gender" value="male">男 
       <input type="radio" name="Gender" value="female" checked>女 
       <br />
+      <!-- 多选框 -->
       Hobbies: 
       <input type="checkbox" name="hobby" value="smoke" checked>Smoking
       <input type="checkbox" name="hobby" value="drink">Drinking
       <input type="checkbox" name="hobby" value="perm">烫头
       <br />
-      <button>Submit</button>
+      <!-- 隐藏域：用户不可见的输入区域，提交表单的时候，携带一些固定的数据 -->
+      <input type="hidden" name="from" value="toutiao">
+      <br />
+      <!-- 确认按钮 第一种写法 -->
+      <button type="submit">Confirm</button>
+      <!-- 确认按钮 第二种写法 -->
+      <!-- <input type="submit"> -->
+
+      <!-- 如果不设置value(默认值)，那么重置就显示默认值 -->
+      <!-- 重置按钮 第一种写法 -->
+      <!-- <button type="reset">重置</button> -->
+      <input type="reset" value="Click me to reset">
+
+      <!-- 如果button不定义type，那么默认就是submit，就会直接提交 -->
+      <!-- type定义成button，就是一个普普通通的button -->
+      <button type="button">检测账户是否被注册</button>
     </form>
   </body>
 </html>
