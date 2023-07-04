@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rich {
+            color: gold;
+        }
+        .beauty {
+            color: red;
+        }
+        /* p元素且类名为beauty的*/
+        p.beauty {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="rich">zhangsan</h2>
+    <h2 class="beauty">lisi</h2>
+    <h2 class="rich beauty">土豪明星王五</h2> <!-- 这里如果是beauty rich，显示也是红色。因为在style代码里是beauty在下方 -->
+    <hr>
+    <p class="beauty">xiaogouwangcai</p>
+    <p class="beauty">xiaozhupeiqi</p>
+</body>
+</html>
