@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /* 行内样式 > id选择器 > 类选择器 > 元素选择器 > 通配选择器 */
+    #atguigu {
+      color: red;
+    }
+    h2 {
+      color: orange;
+    }
+    .slogan {
+      color: green;
+    }
+    /* 下面的h2会先于上面的h2应用*/
+    h2 {
+      color: gray;
+    }
+    * {
+      color: purple;
+    }
+
+  </style>
+</head>
+<body>
+<h2 class="slogan" id="atguigu" style="color: blue">Test</h2>
+</body>
+</html>
