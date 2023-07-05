@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      h2 {
+        color: red;
+      }
+      div {
+        color: red;
+        font-size: 40px;
+        background-color: skyblue;
+      }
+      * {
+        color: gray;
+      }
+      div,
+      p,
+      span {
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+  三大特性：层叠性，继承性，优先性 
+
+  层叠性：如果发生了样式冲突，元素的同一个样式名，被设置了不同的值，根据选择器优先级，进行样式的层叠（覆盖）
+
+  继承性：元素会自动拥有其父元素、或其祖先元素上所设置的某些样式。规则：优先继承离得近的。
+
+  优先级：继承的样式是优先级很弱的。继承需要计算权重。
+-->
+    <h2>尚硅谷</h2>
+    <div>
+      我是div中的文字
+      <span>我是span中的文字1</span>
+      <span>我是span中的文字2</span>
+      <span>我是span中的文字3</span>
+      <p>
+        <span>我是p.span中的文字4</span>
+      </p>
+    </div>
+  </body>
 </html>
