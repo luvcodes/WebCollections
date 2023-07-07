@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(Object.prototype);
+    console.log(Object.prototype.__proto__);
+    function Person() {
+
+    }
+
+    const ldh = new Person();
+    // 实例对象里有一个内置的__proto__(对象原型)
+    // console.log(ldh.__proto__ === Person.prototype);
+
+    // console.log(Person.prototype.__proto__ === Object.prototype);'
+
+</script>
+</body>
+</html>
