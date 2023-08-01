@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-<div id="test"></div>
+  </head>
+  <body>
+    <div id="test"></div>
 
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<script type="text/babel">
-    // 1. 创建类式组件
-    class Weather extends React.Component {
+    <script type="text/babel">
+      // 1. 创建类式组件
+      class Weather extends React.Component {
         constructor(props) {
-            super(props);
-            this.state = {isHot: false}; // 这里写成一个对象，因为官方要求的state写成对象
-            /**
-             * changeWeather可以找到因为changeWeather在Weather的原型上
-             * bind方法的作用有两个: 1. 生成新的函数 2. 函数的this就是Weather的组件实例对象
-             * 等号左边是Weather实例对象的方法的名字就是changeWeather，所以等号右边的changeWeather就是37行的changeWeather
-            */
-            this.changeWeather = this.changeWeather.bind(this);
+          super(props);
+          this.state = { isHot: false }; // 这里写成一个对象，因为官方要求的state写成对象
+          /**
+           * changeWeather可以找到因为changeWeather在Weather的原型上
+           * bind方法的作用有两个: 1. 生成新的函数 2. 函数的this就是Weather的组件实例对象
+           * 等号左边是Weather实例对象的方法的名字就是changeWeather，所以等号右边的changeWeather就是37行的changeWeather
+           */
+          this.changeWeather = this.changeWeather.bind(this);
         }
 
         render() {
-            const {isHot} = this.state;
-            // return语句的changeWeather就是25行的等号左边的changeWeather
-            return <h1 onClick={this.changeWeather}>今天天气很 {this.state.isHot ? "炎热" : "凉爽"}</h1>
+          const { isHot } = this.state;
+          // return语句的changeWeather就是25行的等号左边的changeWeather
+          return (
+            <h1 onClick={this.changeWeather}>
+              今天天气很 {this.state.isHot ? "炎热" : "凉爽"}
+            </h1>
+          );
         }
 
-        // changeWeather放在哪里？类的原型对象上，供实例使用
-        // 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用
-        // 类中的方法默认开启了局部的严格模式，所以changeWeather中的this为undefined
         changeWeather() {
-            console.log(this);
-        }
-    }
+          // changeWeather放在哪里？类的原型对象上，供实例使用
+          // 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用
+          // 类中的方法默认开启了局部的严格模式，所以changeWeather中的this为undefined
 
-    // 2. 渲染组件到页面
-    ReactDOM.render(<Weather/>, document.getElementById('test'));
-</script>
-</body>
+          // 获取原来的isHot值
+          const isHot = this.state.isHot;
+
+          
+          // 注意: 状态(state)不可直接更改，下面这行就是直接更改
+        //   this.state.isHot = !isHot; // 这是错误的写法
+        }
+      }
+
+      // 2. 渲染组件到页面
+      ReactDOM.render(<Weather />, document.getElementById("test"));
+    </script>
+  </body>
 </html>
