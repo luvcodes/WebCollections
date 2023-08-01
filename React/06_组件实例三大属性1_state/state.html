@@ -14,9 +14,13 @@
     <script type="text/babel">
       // 1. 创建类式组件
       class Weather extends React.Component {
+        //构造器调用几次? 在渲染组件部份只使用了一次<Weather />
         constructor(props) {
           super(props);
-          this.state = { isHot: false }; // 这里写成一个对象，因为官方要求的state写成对象
+          this.state = {
+            isHot: false,
+            wind: '微风',
+          }; // 这里写成一个对象，因为官方要求的state写成对象
           /**
            * changeWeather可以找到因为changeWeather在Weather的原型上
            * bind方法的作用有两个: 1. 生成新的函数 2. 函数的this就是Weather的组件实例对象
@@ -25,7 +29,9 @@
           this.changeWeather = this.changeWeather.bind(this);
         }
 
+        // render调用几次? 1 + n次 = 1是初始化那次 n是状态更新的次数
         render() {
+          console.log('render')
           const { isHot } = this.state;
           // return语句的changeWeather就是25行的等号左边的changeWeather
           return (
@@ -35,6 +41,7 @@
           );
         }
 
+        //changeWeather调用几次? 点几次调几次
         changeWeather() {
           // changeWeather放在哪里？类的原型对象上，供实例使用
           // 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用
@@ -42,7 +49,8 @@
 
           // 获取原来的isHot值
           const isHot = this.state.isHot;
-
+          // 严重注意: 状态必须通过setState进行更新，且更新是一种合并，不是替换
+          this.setState({isHot:!isHot});
           
           // 注意: 状态(state)不可直接更改，下面这行就是直接更改
         //   this.state.isHot = !isHot; // 这是错误的写法
