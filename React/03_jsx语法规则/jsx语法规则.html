@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello React</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       .title {
         background-color: orange;
@@ -18,6 +15,10 @@
 
     </div>
 
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <script type="text/babel">
       const myId = "test";
       const myData = "HeLlo, rEaCt";
@@ -26,12 +27,12 @@
       const VDOM = (
         <div>
           <h2 className="title" id={myId.toLowerCase()}>
-            <span style={{ color: "white", fontSize: "29px" }}>
+            <span style={{ color: 'orange', fontSize: "29px" }}>
               {myData.toLowerCase()}
             </span>
           </h2>
           <h2 className="title" id={myId.toUpperCase()}>
-            <span style={{ color: "white", fontSize: "29px" }}>
+            <span style={{ color: "orange", fontSize: "29px" }}>
               {myData.toLowerCase()}
             </span>
           </h2>
@@ -42,7 +43,6 @@
 
       // 2. 渲染虚拟DOM到页面
       ReactDOM.render(VDOM, document.getElementById("test"));
-
       /**
        * jsx语法规则:
        *    1. 定义虚拟DOM时，不要写引号
