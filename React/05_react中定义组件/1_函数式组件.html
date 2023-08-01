@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Title</title>
-  </head>
-  <body>
-    <div id="test"></div>
+</head>
+<body>
+<div id="test"></div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script type="text/babel">
-      // 创建函数式组件
-      function MyComponent() {
+<script type="text/babel">
+    // 创建函数式组件
+    function MyComponent() {
         console.log(this); // 此处的this是undefined，因为babel编译后开启了严格模式
         return <h1>我是用函数定义的组件(适用于[简单组件]的定义)</h1>;
-      }
+    }
 
-      // 渲染组件到页面
-      ReactDOM.render(<MyComponent />, document.getElementById("test"));
+    // 渲染组件到页面
+    ReactDOM.render(<MyComponent/>, document.getElementById("test"));
 
-      /*
-        执行了ReactDOM.render(<MyComponent />, document.getElementById('test'));之后，发生了什么?
-          1. React解析组件标签，找到了MyComponent组件
-          2. 发现组件时使用函数定义的，随后调用该函数，将返回的虚拟DOM转为真实DOM，随后呈现在真实DOM中
-      */
-    </script>
-  </body>
+    /*
+      执行了ReactDOM.render(<MyComponent />, document.getElementById('test'));之后，发生了什么?
+        1. React解析组件标签，找到了MyComponent组件
+        2. 发现组件是使用函数定义的，随后调用该函数，将返回的虚拟DOM转为真实DOM，随后呈现在真实DOM中
+    */
+</script>
+</body>
 </html>
