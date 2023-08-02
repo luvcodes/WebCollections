@@ -12,8 +12,7 @@
         2. 事件的回调需要配置在methods对象中，最终会在vm上
         3. methods中配置的函数，不要用箭头函数！否则this就不是vm了
         4. methods中配置的函数，都是被Vue所管理的函数，this的指向是vm 或 组件实例对象
-        5. @click="demo" 和 @click="demo(#event)" 效果一致，但后者可以传参。
-
+        5. @click="demo" 和 @click="demo(#event)" 效果一致，但后者可以传更多的参
     -->
     <div id="root">
       <h2>欢迎来到{{name}}学习</h2>
@@ -32,10 +31,10 @@
         methods: {
           // showInfo1和showInfo2没有做数据代理
           showInfo1(event) {
-            // console.log(event.target.innerText);
             console.log(this); // 此处的this是vm
-            // alert('同学你好');
           },
+          // showInfo2也可以放在data中，但是会被执行数据代理，但是此方法
+          // 不需要进行数据代理，作为一个方法来调用就可以了，不需要getter和setter
           showInfo2(number, event) {
             console.log(number, event);
           },

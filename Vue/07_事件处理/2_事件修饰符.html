@@ -35,8 +35,6 @@
   <body>
     <!-- Vue中的事件修饰符: -->
     <div id="root">
-      <h2>欢迎来到{{name}}学习</h2>
-
       <!--阻止默认事件-->
       <a href="http://www.google.com" @click.prevent="showInfo">点我提示信息</a>
 
@@ -44,6 +42,7 @@
       <div class="demo1" @click="showInfo">
         <button @click.stop="showInfo">点我提示信息</button>
       </div>
+
       <!--事件只触发一次-->
       <button @click.once="showInfo">点我提示信息</button>
 
@@ -83,7 +82,6 @@
         // }
         showInfo(e) {
           alert("同学你好");
-        //   console.log(e);
         },
         showMsg(msg) {
           console.log(msg);
