@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript" src="../js/vue.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -16,22 +16,22 @@
   2. vm身上所有的属性 及 Vue原型上所有属性，在Vue模版中都可以直接使用
  -->
 <div id="root">
-  <h1>学校名称: {{name}}</h1>
-  <h1>学校地址: {{address}}</h1>
-<!--  <h1>测试一下1: {{1+1}}</h1>-->
-<!--  <h1>测试一下2: {{$options}}</h1>-->
-<!--  <h1>测试一下3: {{$emit}}</h1>-->
+    <h1>学校名称: {{name}}</h1>
+    <h1>学校地址: {{address}}</h1>
+      <h1>测试一下1: {{1+1}}</h1>
+      <h1>测试一下2: {{$options}}</h1>
+      <h1>测试一下3: {{$emit}}</h1>
 </div>
 <script>
-  const vm = new Vue({
-    el: '#root',
-    data: {
-      name: '尚硅谷',
-      address: '北京',
-      a: 1,
-    }
-  })
-  console.log(vm);
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name: '尚硅谷',
+            address: '北京',
+            a: 1,
+        }
+    })
+    console.log(vm);
 </script>
 </body>
 </html>
