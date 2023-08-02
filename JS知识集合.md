@@ -25,7 +25,7 @@
 
 - JavasSript 语言的特别之处就在于：函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。
 
-  #### **`this`关键字**: 
+#### **`this`关键字**: 
 
   - https://www.runoob.com/js/js-this.html
   - 如果该函数是一个构造函数，this 指针指向一个新的对象
@@ -36,10 +36,11 @@
   - 在事件中，this 表示接收事件的元素。
   - 类似 call() 和 apply() 方法可以将 this 引用到任何对象。
 
-  #### **箭头函数**: 
+#### **箭头函数**: 
 
+  - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
   - **箭头函数表达式**的语法比[函数表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，并且没有自己的[`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，[`arguments`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)，[`super`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super)或[`new.target`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
-
+  
   - 作用: 
 
     - 引入箭头函数有两个方面的作用：
