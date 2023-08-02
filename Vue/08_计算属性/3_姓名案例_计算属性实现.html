@@ -13,47 +13,49 @@
             2. 原理: 底层借助Object.defineproperty方法提供的getter和setter。
             3. get函数什么时候执行？
                 (1) 初次读取时会执行一次
-                (2) 当依赖的数据发生改变时会被再次调用
+                (2) 当依赖的数据发生改变时会被再次调用(在这里就是firstname，lastname修改时)
             4. 优势: 与methods实现相比，内部有缓存机制(复用)，效率更高，调试方便
             5. 备注: 
-                1. 计算属性最终会出现在vm上，直接读取使用即可。
+                1. 计算属性最终会出现在vm上，直接读取使用即可，不用写fullName.get()
                 2. 如果计算属性要被修改，那必须写set函数去相应修改，且set中要引起计算时以来的数据发生改变。
+
+            计算属性相对于methods实现是有优势的，因为计算属性有缓存。例如，如果我多次调用{{fullname}}，那么实际上getter方法就只执行一次就可以，
+            因为数据存进了缓存。可是在methods实现的方法中，如果我多次调用{{fullname}}，那么使用到几次{{fullname}} getter就被调用了几次，
     -->
     <div id="root">
         Surname: <input type="text" v-model="firstName"><br><br>
         First name: <input type="text" v-model="lastName"><br><br>
         Full name: <span>{{fullName}}</span><br><br>
-        
-        <!-- Full name: <span>{{fullName}}</span><br><br>
-        Full name: <span>{{fullName}}</span><br><br>
-        Full name: <span>{{fullName}}</span><br><br> -->
     </div>
 </body>
 <script>
     const vm = new Vue({
         el: '#root',
-        // data中写什么是什么
-        // methods中写什么也会显示在vm的devTools里
-        
-        // fullName(计算属性)与上面两个不同，fullName往vm身上放的时候自动去找到get，
-        // 拿到get的返回值，然后放在vm身上，放的时候名字叫做fullName
         data: {
             firstName: '张',
             lastName: '三',
         },
-        methods: {
-
-        }, 
         computed: {
+            /**
+             * fullName(计算属性)与上面两个不同，fullName往vm身上放的时候自动去找到get，
+             * 拿到get的返回值，然后放在vm身上，放的时候名字叫做fullName
+             * 要把计算属性配置成对象。fullname也在vm身上。firstname和lastname都是属性
+             * */
             fullName: {
-                // get有什么作用？当有人读取fullName时，get就会被调用，且返回值就作为fullName的值
-                // get什么时候调用？1. 初次读取fullName时 2. 所以来的数据发生变化时，意思就是如果firstName或者lastName发生变化，get就会被重新调用。
+                /**
+                 * get有什么作用？当有人读取fullName时，get就会被调用，且返回值就作为fullName的值
+                 * get什么时候调用？1. 初次读取fullName时 2. 所以来的数据发生变化时，意思就是如果firstName或者lastName发生变化，get就会被重新调用。
+                 * */
                 get() {
                     console.log('get is called');
                     // console.log(this); // 此处的this是vm
                     return this.firstName + '-' + this.lastName;
                 },
-                // set什么时候调用？当fullName被修改时
+                /**
+                 * set什么时候调用？当fullName被修改时
+                 * 只做console.log没有修改firstName和lastName
+                 *
+                 * */
                 set(value) {
                     console.log('set', value);
                     const arr = value.split('-');
