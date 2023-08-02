@@ -23,6 +23,12 @@
     <script>
       Vue.config.productionTip = false;
 
+
+      /**
+       * 这里如果想在控制台看data里的属性，实际上应该是vm._data
+       * 但是vm._data其实就是下面的data对象。
+       * 整个的new Vue括号里面的是一个配置对象
+       * */
       const vm = new Vue({
         el: "#root",
         data: {
