@@ -12,6 +12,7 @@
 
     <script type="text/babel">
       class Weather extends React.Component {
+        // 初始化状态
         state = {isHot: false, wind: "微风"};
 
         render() {
@@ -24,7 +25,15 @@
           );
         }
 
-        //changeWeather调用几次? 点几次调几次
+        /**
+         * 自定义方法
+           在类中定义方法时，都要写成赋值语句加箭头函数的方式。
+           原来是changeWeather() {}，后来可以改变成changeWeather = function() {}; 前面的这种写法changeWeather就是放在了Weather的原型(原型对象)上，
+           改成后面的方式以后，相当于把changeWeather改到了Weather的实例对象上，但是还是不行。
+           使用箭头函数的原因是因为箭头函数本身没有自己的this，但是箭头函数也是可以在函数体内使用this的，只不过this的指向是箭头函数的上一层，在这里就是Weather，
+           同时又因为使用了函数赋值这种形式，也就把changeWeather放在了Weather实例对象自己身上了。
+         * 
+        */
         changeWeather = () => {
           const isHot = this.state.isHot;
           this.setState({ isHot: !isHot });
