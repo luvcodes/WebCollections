@@ -145,3 +145,15 @@
     ```
 
 - 箭头函数是匿名函数，不能作为构造函数，不可以使用new命令，否则会抛出错误
+
+
+
+## 2023.08.04学习概念
+
+### 模板字符串
+
+```javascript
+`string text ${expression} string text`
+
+tagFunction`string text ${expression} string text`
+```
