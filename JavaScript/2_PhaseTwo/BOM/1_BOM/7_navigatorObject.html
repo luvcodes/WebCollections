@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+这是PC端的界面
 
+<script>
+    // 这是一个立即执行函数
+    // 通过userAgent检测浏览器的版本及其平台
+    !(function () {
+        const userAgent = navigator.userAgent;
+        // 验证是否为Android或Iphone
+        const android = userAgent.match();
+        const iphone = userAgent.match();
+
+        // 如果是Android或Iphone，则跳转至移动站点
+        if (android || iphone) {
+            location.href = 'http://m.itcast.cn';
+        }
+    })()
+
+    // location.href = // 这里其实就已经确定了，用户在使用手机端访问的时候，界面会自动跳转
+</script>
 </body>
 </html>
