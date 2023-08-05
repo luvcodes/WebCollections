@@ -239,7 +239,7 @@
     - 可以判断用户按下哪个键，比如按下回车键可以发布新闻
     - 可以判断鼠标点击了哪个元素，从而做相应的操作
 
-### 环境对象
+### 环境对象 - `this`
 
 - 定义: 指的是函数内部特殊的变量this，它代表着当前函数运行时所处的环境
 - 作用: 弄清楚this的指向，可以让我们代码更简洁
@@ -250,6 +250,25 @@
 ### 回调函数
 
 - 如果将函数A作为参数传递给函数B时，我们称函数A为回调函数。简单理解: 当一个函数当作参数来传递给另外一个函数的时候，这个函数就是回调函数。
+
+  ```javascript
+  function fn() {
+  	console.log("我是回调函数");
+  }
+  // fn传递给了setInterval，fn就是回调函数
+  // 相当于是使用setInterval方法，等待1000ms，再回头调用fn函数
+  setInterval(fn, 1000);
+  ```
+
+  ```javascript
+  const btn = document.querySelector('button');
+  // 这里的function()也是一个回调函数，但是只有当click之后，才会回调function函数
+  btn.addEventListener('click', function() {
+      console.log(this); // 指向button
+  });
+  ```
+
+  
 
 ### 事件流
 
