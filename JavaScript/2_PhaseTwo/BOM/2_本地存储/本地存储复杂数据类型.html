@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 处理复杂数据类型分成两步：
+     * 1. 将对象转换成字符串
+     * 2. 取到字符串以后再将其转换成对象
+     * */
+
+  const obj = {
+    uname: 'ryan',
+    age: 18,
+    gender: 'male'
+  }
+  // // 存储复杂数据类型 无法直接使用
+  // localStorage.setItem('obj', obj);
+  // console.log(localStorage.getItem('obj'))
+
+  // 1. 复杂数据类型必须转换为JSON字符串存储
+  localStorage.setItem('obj', JSON.stringify(obj));
+  // JSON对象: 属性和值有一你好，而且引号统一是双引号
+  // {"uname":"ryan","age":18,"gender":"male"} 这样取过来是一个字符串
+  // console.log(localStorage.getItem('obj'));
+  // console.log(typeof localStorage.getItem('obj'))
+
+    // 2. 将JSON字符串转换为对象
+    console.log(JSON.parse(localStorage.getItem('obj')));
+</script>
+</body>
+</html>

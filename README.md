@@ -428,15 +428,36 @@ JS中出现同步和异步:
   - **数据存储在用户浏览器中**
   - 设置、读取方便、甚至页面刷新不丢失数据
   - 容量较大，sessionStorage 5M和localStorage约20M左右
+  
 - 本地存储分类 - `localStorage`
   - 语法:
     - 存储数据: `localStorage.setItem(key, value)`
     - 获取数据: `localStorage.getItem(key)`
     - 删除数据: `localStorage.removeItem(key)`
-  - 可以将数据永久存储在本地(用户的电脑)，除非手动删除，否则关闭页面也会存在
-  - 可以多窗口(页面)共享(统一浏览器可以共享)
-  - 以健值对的形式存储使用
+    
+  - 可以将数据永久存储在本地(用户的电脑)，除非手动删除，否则关闭页面也会存在。可以多窗口(页面)共享(统一浏览器可以共享)。以健值对的形式存储使用
+  
+  - 存储复杂数据类型: 
+  
+    - 不能用同样的方法存储object类型的数据，所以将复杂数据类型转换成JSON字符串，再存储本地
+  
+    - 处理复杂数据类型分成两步：
+  
+      1. 将对象转换成字符串: 
+      2. 取到字符串以后再将其转换成对象
+  
+      ```javascript
+        const obj = {
+          uname: 'ryan',
+          age: 18,
+          gender: 'male'
+        }
+        localStorage.setItem('obj', JSON.stringify(obj));
+        console.log(JSON.parse(localStorage.getItem('obj')));
+      ```
+  
 - 本地存储分类 - `sessionStorage`
+  
   - 特性:
     - 生命周期为关闭浏览器窗口
     - 在一个窗口(页面)下数据可以共享
