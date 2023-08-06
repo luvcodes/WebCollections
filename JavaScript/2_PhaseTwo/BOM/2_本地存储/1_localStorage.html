@@ -8,13 +8,14 @@
     <script>
       // 1. 要存储一个名字 uname
       // localStorage.setItem('键', '值')
-      localStorage("uname", "ryan");
+      localStorage.setItem("uname", "ryan");
       // 2. 获取方式 都加引号
       console.log(localStorage.getItem("uname"));
       // 3. 删除本地存储 只删除名字
       localStorage.removeItem("uname");
       // 4. 改
       localStorage.setItem("uname", "yang");
+      localStorage.getItem("uname");
 
       // 我要存一个年龄
       // 本地存储只能存储字符串数据类型
