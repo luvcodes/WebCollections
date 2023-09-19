@@ -17,6 +17,7 @@
     <div id="root">
       <h2>欢迎来到{{name}}学习</h2>
       <button @click="showInfo1">点我提示信息1 (不传参)</button>
+        <!--$event就是用来占位-->
       <button @click="showInfo2(66,$event)">点我提示信息2(传参)</button>
     </div>
     <script>
@@ -27,13 +28,25 @@
           name: "尚硅谷", // 这个是做了数据代理的
         },
         methods: {
-          // showInfo1和showInfo2没有做数据代理
+            /**
+             * showInfo1和showInfo2没有做数据代理
+             * 为什么没有做呢？name是数据，name是为了能够后来进行修改并且页面可以响应
+             * showInfo1和showInfo2都是定义了的，不需要后来再进行改变
+             * */
           showInfo1(event) {
+              console.log(event.target.innerText);
+              console.log(this === vm);
             console.log(this); // 此处的this是vm
           },
+      //       showInfo(event) => {
+      //     console.log(this);
+      // },
+
           // showInfo2也可以放在data中，但是会被执行数据代理，但是此方法
           // 不需要进行数据代理，作为一个方法来调用就可以了，不需要getter和setter
           showInfo2(number, event) {
+              console.log(event.target.innerText);
+              console.log(this === vm);
             console.log(number, event);
           },
         },
