@@ -35,16 +35,22 @@
             firstName: '张',
             lastName: '三',
         },
+        methods: {
+          demo() {
+
+          }
+        },
         computed: {
             /**
-             * fullName(计算属性)与上面两个不同，fullName往vm身上放的时候自动去找到get，
+             * fullName(计算属性)与上面data中的两个属性, 或者是demo方法不同，fullName往vm身上放的时候自动去找到get，
              * 拿到get的返回值，然后放在vm身上，放的时候名字叫做fullName
              * 要把计算属性配置成对象。fullname也在vm身上。firstname和lastname都是属性
              * */
             fullName: {
                 /**
                  * get有什么作用？当有人读取fullName时，get就会被调用，且返回值就作为fullName的值
-                 * get什么时候调用？1. 初次读取fullName时 2. 所以来的数据发生变化时，意思就是如果firstName或者lastName发生变化，get就会被重新调用。
+                 * get什么时候调用？1. 初次读取fullName时 2. 所依赖的数据发生变化时，
+                 * 如果firstName或者lastName发生变化，get就会被重新调用。
                  * */
                 get() {
                     console.log('get is called');
@@ -53,8 +59,7 @@
                 },
                 /**
                  * set什么时候调用？当fullName被修改时
-                 * 只做console.log没有修改firstName和lastName
-                 *
+                 * 只做console.log的时候是没有修改firstName和lastName的
                  * */
                 set(value) {
                     console.log('set', value);

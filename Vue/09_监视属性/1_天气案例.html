@@ -15,8 +15,6 @@
     </div>
   </body>
   <script>
-    Vue.config.productionTip = false;
-
     new Vue({
         el: '#root',
         data: {
@@ -24,7 +22,8 @@
         },
         computed: {
             info() {
-                return this.isHot ? 'Hot' : 'Cold'; // 在这里要加上this，模板里调用isHot可以不用this
+                // 在这里要加上this，模板里调用isHot可以不用this
+                return this.isHot ? 'Hot' : 'Cold';
             }
         },
         methods: {
