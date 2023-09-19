@@ -20,8 +20,6 @@
       <button @click="showInfo2(66,$event)">点我提示信息2(传参)</button>
     </div>
     <script>
-      Vue.config.productionTip = false; // 阻止 vue 在启动时生成生产提示
-
       const vm = new Vue({
         el: "#root",
         // 只有放在data中的才会做数据劫持、数据代理
