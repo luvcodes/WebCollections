@@ -1,15 +1,13 @@
 // arguments 的使用 只有函数才有 arguments对象 而且是每个函数都内置好了这个arguments
 function fn() {
   // 里面存了所有传过来的实参
-//   console.log(arguments);
-//   console.log(arguments.length);
+  // console.log(arguments);
+  // console.log(arguments.length);
 
   for (var i = 0; i < arguments.length; i++) {
     console.log(arguments[i]);
   }
 }
-
-
 
 fn(1, 2, 3);
 fn(1, 2, 3, 4, 5);

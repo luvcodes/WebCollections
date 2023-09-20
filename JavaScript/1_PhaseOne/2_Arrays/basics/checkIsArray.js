@@ -8,6 +8,7 @@ function reverse(arr) {
 }
 console.log(reverse([1,2,3]));
 console.log(reverse(1,2,3));
+
 // 检测是否为数组
 // (1) instanceof 运算符 它可以用来检测是否为数组
 var arr = [];
