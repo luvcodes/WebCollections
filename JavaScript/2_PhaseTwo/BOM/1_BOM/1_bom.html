@@ -6,11 +6,13 @@
 </head>
 <body>
 <script>
+    // 隐藏的'window.'的部份
     console.log(document === window.document);
     function fn() {
         console.log(11); 
     }
     fn();
+    // window.fn();
     var num = 10;
     console.log(window.num);
 </script>

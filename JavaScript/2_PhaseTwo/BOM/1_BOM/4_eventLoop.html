@@ -8,6 +8,11 @@
 <script>
   console.log(1);
   console.log(2);
+  /**
+   * setTimeout(function() { console.log(3); }, 0); 是一个异步操作。
+   * 尽管延迟时间设置为0毫秒，但它会被放入事件队列（Event Queue）中，等待当前执行栈（Execution Stack）清空。
+   * 执行完4之后，当执行栈清空后，事件循环会检查事件队列。这时，setTimeout 的回调函数会被放入执行栈中，执行并输出3
+   * */
   setTimeout(function() {
     console.log(3);
   }, 0);
