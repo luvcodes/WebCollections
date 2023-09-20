@@ -13,8 +13,6 @@
     </div>
   </body>
   <script>
-    Vue.config.productionTip = false;
-
     const vm = new Vue({
       el: "#root",
       data: {
@@ -35,28 +33,12 @@
         },
       },
       watch: {
-        // 正常写法
-        // isHot: {
-        //   // immediate: true, // 初始化时让handler调用一下 
-        //   // deep:true, // 深度监视
-        //   handler(newValue, oldValue) {
-        //     console.log("isHot has been changed", newValue, oldValue);
-        //   },
-        // },
-        // 简写
+        // 如果配置项当中不需要immediate和deep的时候，就可以使用简写形式
         // isHot(newValue, oldValue) {
         //   console.log("isHot has been changed", newValue, oldValue);
         // }
       },
     });
-
-    // vm.$watch("isHot", {
-    //   immediate: true,
-    //   deep: true,
-    //   handler(newValue, oldValue) {
-    //     console.log("isHot has been changed", newValue, oldValue);
-    //   },
-    // });
 
     // 不能用箭头函数。所有Vue管理的函数都要写成普通函数
     vm.$watch("isHot", function(newValue, oldValue){

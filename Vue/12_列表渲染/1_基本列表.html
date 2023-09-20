@@ -18,11 +18,11 @@
         <h2>Person list</h2>
         <!-- 遍历数组 -->
         <ul>
-            <li v-for="p in persons" :key="p.id">
+            <li v-for="p in persons" v-bind:key="p.id">
                 {{p.name}} - {{p.age}}
             </li>
             <!-- 第二种写法 -->
-            <!-- <li v-for="(p, index) in persons" :keys="index">
+            <!-- <li v-for="(p, index) in persons" v-bind:keys="index">
                 {{p.name}} - {{p.age}} -- {{index}}
             </li> -->
         </ul>
@@ -31,7 +31,7 @@
         <!-- 先收到值再收到键 -->
         <h2>Car Info</h2>
         <ul>
-            <li v-for="(value, key) in car" :key="key">
+            <li v-for="(value, key) in car" v-bind:key="key">
                 {{key}}-{{value}}
             </li>
         </ul>
@@ -39,7 +39,7 @@
         <!-- 遍历字符串 用得少 -->
         <h2>String</h2>
         <ul>
-            <li v-for="(char, index) in str" :key="index">
+            <li v-for="(char, index) in str" v-bind:key="index">
                 {{index}} - {{char}}
             </li>
         </ul>
@@ -47,7 +47,7 @@
         <!-- 遍历指定次数 用得少 -->
         <h2>Test iterate target times</h2>
         <ul>
-            <li v-for="(number, index) of 5" :key="index">
+            <li v-for="(number, index) of 5" v-bind:key="index">
                 {{index}} - {{number}}
             </li>
         </ul>

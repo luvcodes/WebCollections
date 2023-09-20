@@ -33,11 +33,6 @@
       watch: {
         firstName(val) {
           this.fullName = val + "-" + this.lastName;
-
-          // 使用定时器
-          // setTimeout(() => {
-          //   this.fullName = val + "-" + this.lastName;
-          // }, 1000);
         },
         lastName(val) {
             this.fullName = this.firstName + "-" + val;

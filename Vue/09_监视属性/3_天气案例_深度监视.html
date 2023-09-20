@@ -53,10 +53,27 @@
             console.log("isHot has been changed", newValue, oldValue);
           },
         },
+
+        /**
+         * 这样写是不行的，因为a不是一个属性，属性只有isHot和numbers
+         * */
+        // a: {
+        //   handler() {
+        //     console.log("a changed")
+        //   }
+        // },
+
         // 监视多级结构中某个属性的变化
         // 'numbers.a': {
         //   handler() {
         //     console.log('a is changed');
+        //   }
+        // },
+
+        // 这样写虽然也可以做到这个需求，但是太麻烦了，如果有100多个属性，这样就写不完了
+        // 'numbers.b': {
+        //   handler() {
+        //     console.log('b is changed');
         //   }
         // },
 
