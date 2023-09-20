@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+    <!--准备好一个容器-->
+    <div id="root">
+        <h2>人员列表</h2>
+        <label>
+            <input type="text" placeholder="请输入名字" v-model="keyword">
+        </label>
+        <ul>
+            <li v-for="(p,index) in filteredPersons" v-bind:key="index">
+                {{p.name}} -- {{p.age}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript">
+    new Vue({
+       el: '#root',
+       data: {
+           keyword: '',
+           persons: [
+               {id:'001', name: '马冬梅', age: 19, sex:'女'},
+               {id:'002', name: '周冬雨', age: 20, sex:'女'},
+               {id:'003', name: '周杰伦', age: 21, sex:'男'},
+               {id:'004', name: '温兆伦', age: 22, sex:'男'},
+           ],
+           filteredPersons: [
+
+           ],
+       },
+        watch: {
+           keyword: {
+               // 这里传参数第二个不需要oldValue，因为不用关心原来的数据是什么，现在是想知道
+               // 新的value是什么
+               handler(newValue) {
+                   // console.log("keyword is changed", newValue)
+                   // 这里就是在做数组过滤, filter不会修改原数组，返回一个新数组，需要用this.persons来承接
+                   this.filteredPersons = this.persons.filter((person) => {
+                       // return后面跟上过滤的条件
+                       return person.name.indexOf(newValue) != -1;
+                   })
+               }
+           }
+        }
+    });
+</script>
+</html>
