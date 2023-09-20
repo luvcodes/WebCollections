@@ -18,10 +18,11 @@
         <h2>Person list</h2>
         <!-- 遍历数组 -->
         <ul>
+            <!--想要使用循环这样的情况，必须要定义一个标识，在这里key就是标识-->
             <li v-for="p in persons" v-bind:key="p.id">
                 {{p.name}} - {{p.age}}
             </li>
-            <!-- 第二种写法 -->
+            <!-- 第二种写法，index就是数组的索引值 -->
             <!-- <li v-for="(p, index) in persons" v-bind:keys="index">
                 {{p.name}} - {{p.age}} -- {{index}}
             </li> -->
@@ -48,7 +49,7 @@
         <h2>Test iterate target times</h2>
         <ul>
             <li v-for="(number, index) of 5" v-bind:key="index">
-                {{index}} - {{number}}
+                {{number}} -- {{index}}
             </li>
         </ul>
     </div>

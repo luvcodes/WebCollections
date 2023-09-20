@@ -33,7 +33,7 @@
         <button @click.once="add">Add a new person</button>
         <!-- 遍历数组 -->
         <ul>
-            <li v-for="(p,index) in persons" :key="p.id">
+            <li v-for="(p,index) in persons" v-bind:key="p.id">
                 {{p.name}} - {{p.age}}
                 <input type="text">
             </li>
@@ -42,8 +42,6 @@
   </body>
 
   <script>
-    Vue.config.productionTip = false;
-    
     new Vue({
       el: "#root",
       data: {
