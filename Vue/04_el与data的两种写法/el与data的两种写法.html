@@ -37,9 +37,9 @@
         new Vue({
             el: '#root',
             // data的第一种写法: 对象式
-            // data: {
-            //     name: '尚硅谷',
-            // }
+            data: {
+                name: '尚硅谷',
+            }
 
             // data的第二种写法: 函数式
             // data: function() {
@@ -49,12 +49,12 @@
             //     }
             // }
 
-            data() {
-                console.log('@@@', this); // 此处的this是vue实例对象
-                return {
-                    name: '尚硅谷'
-                }
-            }
+            // data() {
+            //     console.log('@@@', this); // 此处的this是vue实例对象
+            //     return {
+            //         name: '尚硅谷'
+            //     }
+            // }
         })
     </script>
   </body>

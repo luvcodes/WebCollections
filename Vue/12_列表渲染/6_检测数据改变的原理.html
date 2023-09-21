@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
 </head>
 <body>
-$END$
+<div id="root">
+    <h2>行业: {{name}}</h2>
+    <h2>地点: {{address}}</h2>
+</div>
 </body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name: '前端',
+            address: '北京',
+        }
+    });
+</script>
 </html>

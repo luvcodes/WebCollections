@@ -48,34 +48,7 @@
             console.log("isHot has been changed", newValue, oldValue);
           },
         },
-        /**
-         * 这里其实监测计算属性中的info也是可以的
-         * */
-        // info: {
-        //   /**
-        //    * 初始化时让handler调用一下
-        //    * 这样看现在没什么用，但是就是相当于页面一渲染，就可以调用一下输初始状态
-        //    * */
-        //   immediate: true,
-        //   // handler什么时候调用？当isHot发生改变时
-        //   handler(newValue, oldValue) {
-        //     console.log("info has been changed", newValue, oldValue);
-        //   },
-        // },
       },
     });
-
-
-    /**
-     * 配置项叫做watch, vm身上的方法叫做$watch
-     * */
-    // 另一种写法
-    // vm.$watch("isHot", {
-    //   immediate: true, // 初始化时让handler调用一下
-    //   // handler什么时候调用？当isHot发生改变时
-    //   handler(newValue, oldValue) {
-    //     console.log("isHot has been changed", newValue, oldValue);
-    //   },
-    // });
   </script>
 </html>
