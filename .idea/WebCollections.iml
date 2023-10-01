@@ -13,4 +13,7 @@
     <orderEntry type="library" name="react" level="application" />
     <orderEntry type="library" name="@babel/standalone" level="application" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="a4e9595f-dbbd-48a2-895e-25bbe4abf957" />
+  </component>
 </module>
