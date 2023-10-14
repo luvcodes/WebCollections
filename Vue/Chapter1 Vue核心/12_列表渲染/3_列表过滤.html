@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+    <!--准备好一个容器-->
+    <div id="root">
+        <h2>人员列表</h2>
+        <label>
+            <input type="text" placeholder="请输入名字" v-model="keyword">
+        </label>
+        <ul>
+            <li v-for="(p,index) in filteredPersons" v-bind:key="index">
+                {{p.name}} -- {{p.age}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    /**
+     * 用监视属性实现
+     * */
+    // new Vue({
+    //    el: '#root',
+    //    data: {
+    //        keyword: '',
+    //        persons: [
+    //            {id:'001', name: '马冬梅', age: 19, sex:'女'},
+    //            {id:'002', name: '周冬雨', age: 20, sex:'女'},
+    //            {id:'003', name: '周杰伦', age: 21, sex:'男'},
+    //            {id:'004', name: '温兆伦', age: 22, sex:'男'},
+    //        ],
+    //        filteredPersons: [
+    //
+    //        ],
+    //    },
+    //     watch: {
+    //        keyword: {
+    //            /**
+    //             * 这里需要加上immediate的原因就在于，实际上搜索的时候会搜索空串的，
+    //             * 空串其实就会搜索出数组中的所有元素，但是我现在使用了immediate实际就
+    //             * immediate的作用就是上来就会直接调用handler，那么现在实际上传入的newValue就是空串，
+    //             * 那么就会直接先输出数组中的所有元素。
+    //             * */
+    //            immediate: true,
+    //            // 这里传参数第二个不需要oldValue，因为不用关心原来的数据是什么，现在是想知道
+    //            // 新的value是什么
+    //            handler(newValue) {
+    //                // console.log("keyword is changed", newValue)
+    //                // 这里就是在做数组过滤, filter不会修改原数组，返回一个新数组，需要用this.persons来承接
+    //                this.filteredPersons = this.persons.filter((person) => {
+    //                    // return后面跟上过滤的条件
+    //                    return person.name.indexOf(newValue) != -1;
+    //                })
+    //            }
+    //        }
+    //     }
+    // });
+
+    /**
+     * 用计算属性实现
+     * */
+    new Vue({
+           el: '#root',
+           data: {
+               keyword: '',
+               persons: [
+                   {id:'001', name: '马冬梅', age: 19, sex:'女'},
+                   {id:'002', name: '周冬雨', age: 20, sex:'女'},
+                   {id:'003', name: '周杰伦', age: 21, sex:'男'},
+                   {id:'004', name: '温兆伦', age: 22, sex:'男'},
+               ],
+           },
+        computed: {
+               filteredPersons() {
+                   // 这个return是计算属性，也就是filteredPerson确定的，是一个新数组
+                   return this.persons.filter((person) => {
+                       // 这个return是filter方法确定的
+                       return person.name.indexOf(this.keyword) != -1;
+                   })
+               }
+        }
+
+    });
+</script>
+</html>

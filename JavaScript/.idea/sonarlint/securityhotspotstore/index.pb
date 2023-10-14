@@ -1,0 +1,31 @@
+
+h
+81_PhaseOne/3_StringsObject/basicMethods/calculateMost.js,c\7\c712d3eabce0dac29d571631eea68939bad56fd4
+S
+#1_PhaseOne/5_Functions/arguments.js,c\1\c1dfc18499ec2fda447fa3f5270d0d19c0ca3f93
+]
+-1_PhaseOne/5_Functions/immediateFunction.html,7\6\7697bee1c527c759a5037f17988804afba20cb4f
+V
+&1_PhaseOne/5_Functions/func_basics2.js,e\2\e2b8bca140cd045ee24d3dc80e714762e95352f3
+T
+$1_PhaseOne/5_Functions/returnFunc.js,7\b\7bc2cd182bf9a56d7588d55dcf10c06502138705
+U
+%1_PhaseOne/6_Objects/iterateObject.js,c\f\cf01f7c6c37ec94b083fbd64f7a956f9ed5b9986
+O
+1_PhaseOne/6_Objects/object1.js,0\0\00f0b429e6725c9fd641b32cda13e46623f2a70e
+O
+1_PhaseOne/6_Objects/object2.js,c\3\c36d71eef0292d0d28b50439d7a30ec8704e2eb2
+e
+52_PhaseTwo/DOM/7_Nodes/1_searchNode/1_parentNode.html,4\9\493b5329059aaf73df98f82822776559397bf3f9
+g
+72_PhaseTwo/DOM/7_Nodes/1_searchNode/2_clickToClose.html,e\3\e3a7565ff1d931c49187124c5aa5cae66eb01ff7
+W
+'2_PhaseTwo/DOM/7_Nodes/siblingNode.html,d\2\d26cc53e21d7865bda9e4322d9573c49cf2582be
+l
+<3_PhaseThree/2_变量提升和函数提升/2_变量提升.js,0\2\02e20c1b73f87039235ec8779664abd1e68b75eb
+]
+-3_PhaseThree/5_箭头函数/7_箭头函数.js,3\d\3d636fed77f26bfd2e078a082934b1de01b3e982
+Y
+)3_PhaseThree/10_深浅拷贝/深拷贝.js,0\9\092304a8c9917133c854583bea43c92e96633b24
+^
+.1_PhaseOne/5_Functions/preparsing/practice1.js,7\a\7af65923e65027259848a80b34c49c577a5f8d2b

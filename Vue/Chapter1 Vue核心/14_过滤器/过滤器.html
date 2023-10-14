@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/cdn.bootcdn.net_ajax_libs_dayjs_1.11.9_dayjs.min.js"></script>
+</head>
+<body>
+<!--
+    过滤器:
+        定义: 对要显示的数据进行特定格式化后再显示 (适用于一些简单逻辑的处理)
+        语法:
+            1. 注册过滤器: Vue.filter(name, callback) 或 new Vue{filters:{}}
+            2. 使用过滤器: {{xxx | 过滤器名}} 或 v-bind:属性 = "xxx | 过滤器名"
+        备注:
+            1. 过滤器也可以接收额外参数、多个过滤器也可以串联
+            2. 并没有改变原本的数据，是产生新的对应的数据
+-->
+
+    <div id="root">
+        <h2>显示格式化后的时间</h2>
+        <!-- 计算属性实现 -->
+        <h3>现在是: {{fmtTime}}</h3>
+        <!-- methods实现 -->
+        <h3>现在是: {{getFmtTime()}}</h3>
+        <!-- 过滤器实现 -->
+        <h3>现在是: {{time | timeFormatter}}</h3>
+        <!-- 过滤器实现(传参) -->
+        <h3>现在是: {{time | timeFormatter('YYYY_MM_DD')}}</h3>
+        <!-- 过滤器实现
+         多个过滤器的串联
+         time先传到timeFormatter，再传到mySlice
+         -->
+        <h3>现在是: {{time | timeFormatter('YYYY_MM_DD') | mySlice}}</h3>
+
+        <!-- 这样配合其他的也可以 -->
+        <h3 v-bind:x="msg | mySlice">前端</h3>
+    </div>
+
+    <div id="root2">
+        <h2>{{msg | muSlice}}</h2>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    // 全局过滤器
+    Vue.filter('muSlice', function(value) {
+        return value.slice(0, 4);
+    });
+
+    new Vue({
+        el: '#root',
+        data: {
+            time: 123456789,
+            msg: '你好, 前端',
+        },
+        computed: {
+            fmtTime() {
+                // 这里传参就是上面的要格式化的时间戳
+                // 如果不传参，也允许，就是直接格式化当前时间
+                return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss')
+            },
+        },
+        methods: {
+            getFmtTime() {
+                return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss')
+            }
+        },
+        filters: {
+            // 局部过滤器
+            /**
+             * es6有一个形参默认值，使用的timeFormatter()没有参数，那么就是直接用“形参默认值”
+             * 如果有参数，那么就按照上面HTML标签中定义的格式
+             * */
+            timeFormatter(value, str='YYYY-MM-DD HH:mm:ss') {
+                // console.log('@', value);
+                return dayjs(value).format(str)
+            },
+            mySlice(value) {
+                return value.slice(0, 4);
+            },
+        }
+    });
+
+    new Vue({
+        el: '#root2',
+        data: {
+            msg: 'hello, frontend!'
+        }
+    });
+</script>
+</html>

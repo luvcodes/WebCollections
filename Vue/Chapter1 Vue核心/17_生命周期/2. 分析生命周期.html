@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>n: {{n}}</h2>
+        <button @click="add">Click me to n + 1</button>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    new Vue({
+        el: '#root',
+        data: {
+            n: 1
+        },
+        methods: {
+            add() {
+                this.n++;
+            }
+        },
+        beforeCreate() {
+            console.log('beforeCreate');
+            console.log(this);
+            debugger;
+        },
+        created() {
+            console.log('created');
+            console.log(this);
+            debugger;
+        },
+        beforeMount() {
+            console.log('beforeMount');
+            console.log(this);
+            debugger;
+        },
+        mounted() {
+            console.log("Mounted");
+            console.log(this);
+            debugger;
+        }
+    });
+</script>
+</html>

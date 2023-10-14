@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <title>Title</title>
+  </head>
+  <body>
+    <!--
+      事件的基本使用: 
+        1. 使用v-on:xxx 或 @xxx 绑定事件，其中xxx是事件名。
+        2. 事件的回调需要配置在methods对象中，最终会在vm上
+        3. methods中配置的函数，不要用箭头函数！否则this就不是vm了
+        4. methods中配置的函数，都是被Vue所管理的函数，this的指向是vm 或 组件实例对象
+        5. @click="demo" 和 @click="demo(#event)" 效果一致，但后者可以传更多的参
+    -->
+    <div id="root">
+      <h2>欢迎来到{{name}}学习</h2>
+      <button @click="showInfo1">点我提示信息1 (不传参)</button>
+      <!--$event就是用来占位-->
+      <button @click="showInfo2(66,$event)">点我提示信息2(传参)</button>
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        // 只有放在data中的才会做数据劫持、数据代理
+        data: {
+          name: "前端", // 这个是做了数据代理的
+        },
+        methods: {
+            /**
+             * showInfo1和showInfo2没有做数据代理
+             * 为什么没有做呢？name是数据，name是为了能够后来进行修改并且页面可以响应
+             * showInfo1和showInfo2都是定义了的，不需要后来再进行改变
+             * */
+          showInfo1(event) {
+              console.log(event.target.innerText);
+              console.log(this === vm);
+            console.log(this); // 此处的this是vm
+          },
+      //       showInfo(event) => {
+      //     console.log(this);
+      // },
+
+          // showInfo2也可以放在data中，但是会被执行数据代理，但是此方法
+          // 不需要进行数据代理，作为一个方法来调用就可以了，不需要getter和setter
+          showInfo2(number, event) {
+              console.log(event.target.innerText);
+              console.log(this === vm);
+            console.log(number, event);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

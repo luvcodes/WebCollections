@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      Surname: <input type="text" v-model="firstName" /><br /><br />
+      First name: <input type="text" v-model="lastName" /><br /><br />
+      Full name: <span>{{fullName}}</span><br /><br />
+    </div>
+  </body>
+  <script>
+    const vm = new Vue({
+      el: "#root",
+      data: {
+        firstName: "张",
+        lastName: "三",
+      },
+      methods: {},
+      computed: {
+        // 简写, 注意: 只考虑读取，不考虑修改的时候才可以使用简写形式，因为它基本就是getter的内容
+        // 当作getter用
+        fullName() {
+          console.log("get被调用了");
+          return this.firstName + "-" + this.lastName;
+        
+        // 面临异步计算的时候，不能用计算属性，因为这个return语句是实际的结果，
+        // 但是这个return返回给了setTimeout，而不是给这个目标函数，所以没有输出
+        // 也就是输出是undefined
+        //   setTimeout(() => {
+        //     return this.firstName + "-" + this.lastName;
+        //   }, 1000);
+        },
+
+        // fullName: function() {
+        //   console.log("get被调用了");
+        //   return this.firstName + "-" + this.lastName;
+        // }
+      },
+    });
+  </script>
+</html>

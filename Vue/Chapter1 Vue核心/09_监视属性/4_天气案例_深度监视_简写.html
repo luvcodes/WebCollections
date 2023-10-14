@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <h2>Today's weather is {{info}}</h2>
+      <button @click="changeWeather">Change weather</button><br />
+    </div>
+  </body>
+  <script>
+    const vm = new Vue({
+      el: "#root",
+      data: {
+        isHot: true,
+        numbers: {
+          a: 1,
+          b: 1,
+        },
+      },
+      computed: {
+        info() {
+          return this.isHot ? "Hot" : "Cold"; // 在这里要加上this，模板里调用isHot可以不用this
+        },
+      },
+      methods: {
+        changeWeather() {
+          this.isHot = !this.isHot;
+        },
+      },
+      watch: {
+        // 如果配置项当中不需要immediate和deep的时候，就可以使用简写形式
+        // isHot(newValue, oldValue) {
+        //   console.log("isHot has been changed", newValue, oldValue);
+        // }
+      },
+    });
+
+    // 不能用箭头函数。所有Vue管理的函数都要写成普通函数
+    vm.$watch("isHot", function(newValue, oldValue){
+      console.log("isHot has been changed", newValue, oldValue);
+    })
+  </script>
+</html>
