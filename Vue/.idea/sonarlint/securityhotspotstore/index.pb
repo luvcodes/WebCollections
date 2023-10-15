@@ -25,3 +25,9 @@ u
 EChapter2 Vue组件化编程/18_非单文件组件/3.组件嵌套.html,8\a\8a18b70ac42071208e8a1d9edde2199b3dd1bbbf
 u
 EChapter2 Vue组件化编程/18_非单文件组件/4.VueComponent.html,5\5\5543f3a5c17fbbd2144e92a4670e709cbb393ce3
+l
+<Chapter1_Vue核心/06_数据代理/2_何为数据代理.html,3\a\3a572b0610e94c7a0b6bef22990b3251dc491352
+o
+?Chapter1_Vue核心/06_数据代理/3_Vue中的数据代理.html,5\a\5aee480c4460010f6bf37596b49f29b2226fa088
+u
+EChapter2_Vue组件化编程/18_非单文件组件/4.VueComponent.html,0\e\0ea8185dacca2e71d98417fd04c5dfde2f8ef384
