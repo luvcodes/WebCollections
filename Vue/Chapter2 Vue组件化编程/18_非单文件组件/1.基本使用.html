@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+<body>
+<!--
+    Vue中使用组件的三大步骤:
+        1. 定义组件 (创建组件)
+        2. 注册组件
+        3. 使用组件 (写组件标签)
+    如何定义一个组件？
+        1. el不要写: 最终所有的组件都要经过一个vm的管理，由vm中的el决定服务哪个容器。
+        2. data必须写成函数，为什么？避免组件被复用时，数据存在引用关系。
+        是哦那个template可以配置组件结构
+    如何注册组件？
+        局部注册: 靠new Vue的时候传入components选项
+        全局注册: 靠Vue.component('组件名', 组件)
+    编写组件标签
+        <school></school>
+ -->
+<div id="root">
+    <h2>{{msg}}</h2>
+    <school></school>
+    <hr/>
+    <student></student>
+    <hr />
+    <hello></hello>
+</div>
+
+<div id="root2">
+    <hello></hello>
+</div>
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    // 创建组件
+    const school = Vue.extend({
+        // el: '#root',
+        template: `
+          <div>
+            <h2>Uni name: {{ schoolName }}</h2>
+            <h2>Uni Adderss: {{ schoolAddress }}</h2>
+            <button @click="showName">Click to prompt school name</button>
+          </div>
+        `,
+        data() {
+            return {
+                schoolName: 'uni sydney',
+                schoolAddress: 'sydney',
+            }
+        },
+        methods: {
+            showName() {
+                alert(this.schoolName);
+            }
+        }
+    });
+
+    // Student component
+    const student = Vue.extend({
+        template: `
+          <div>
+            <h2>Student name: {{ studentName }}</h2>
+            <h2>Student Adderss: {{ studentAge }}</h2>
+          </div>
+        `,
+        data() {
+            return {
+                studentName: 'uni sydney',
+                studentAge: 22,
+            }
+        }
+    });
+
+    // Hello component
+    const hello = Vue.extend({
+        template: `
+          <div>
+            <h2>How to do greetings: {{ name }}</h2>
+          </div>
+        `,
+        data() {
+            return {
+                name: 'mark',
+            }
+        }
+    })
+
+    Vue.component('hello', hello);
+
+
+    new Vue({
+        el: '#root',
+        data: {
+            msg: 'hello'
+        },
+        // 注册组件 (局部注册)
+        components: {
+            school,
+            student,
+        }
+    });
+
+
+    new Vue({
+        el: '#root2',
+    })
+</script>
+</html>
