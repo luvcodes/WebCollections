@@ -1,30 +1,24 @@
 <script>
   export default {
-    name: 'SchoolComponent',
+    name: "SchoolComponent",
     data() {
       return {
-        schoolName: 'uni sydney',
-        schoolAddress: 'sydney',
+        name: 'uni sydney',
+        address: 'sydney',
       }
     },
-    methods: {
-      showName() {
-        alert(this.schoolName);
-      }
-    }
-  };
+  }
 </script>
 
 <template>
   <div class="demo">
-    <h2>Uni name: {{ schoolName }}</h2>
-    <h2>Uni Adderss: {{ schoolAddress }}</h2>
-    <button @click="showName">Click to prompt school name</button>
+    <h2>{{name}}</h2>
+    <h2>{{address}}</h2>
   </div>
 </template>
 
 <style>
   .demo {
-    background-color: orange;
+    background-color: grey;
   }
 </style>

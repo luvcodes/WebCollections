@@ -17,3 +17,13 @@ o
 ?Chapter1_Vue核心/06_数据代理/3_Vue中的数据代理.html,5\a\5aee480c4460010f6bf37596b49f29b2226fa088
 u
 EChapter2_Vue组件化编程/18_非单文件组件/4.VueComponent.html,0\e\0ea8185dacca2e71d98417fd04c5dfde2f8ef384
+d
+4Chapter3_使用脚手架/vue-test2/public/index.html,2\2\2251f015c3f1f21cdf4525a4d6285a995bc1046a
+`
+0Chapter3_使用脚手架/vue-test2/vue.config.js,4\5\452702560f35802d62d63a1dd677b6963b7339b7
+l
+<Chapter3_使用脚手架/vue-test2/src/components/School.vue,6\1\61104f557f80879f0d0e586b691702debee2937a
+^
+.Chapter3_使用脚手架/vue-test2/src/App.vue,5\f\5fd8cd8472b6a3f70f89c0ef4c5dcb078fe30188
+^
+.Chapter3_使用脚手架/vue-test2/src/main.js,c\3\c3a91dab296e7331a86c253c02b3b31f721bff5d
